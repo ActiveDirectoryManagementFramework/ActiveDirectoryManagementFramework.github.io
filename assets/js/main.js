@@ -16,7 +16,7 @@ var navigationBuilder = function(data) {
     var i;
     for (i = 0; i < data.fellows.length; i++) {
         $("nav ul").append("<li class='tag-h2'><a href='" + data.fellows[i].Link + "'>" + data.fellows[i].Label + "</a></li>");
-        $("section ul").append("<li class='tag-h2'><a href='" + data.fellows[i].Link + "'>" + data.fellows[i].Label + "</a></li>");
+        $("#inMainList").append("<li class='tag-h2'><a href='" + data.fellows[i].Link + "'>" + data.fellows[i].Label + "</a></li>");
     }
 
     sectionHeight();
