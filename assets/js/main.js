@@ -10,7 +10,8 @@ var sectionHeight = function() {
     }
 }
 var navigationBuilder = function(data) {
-    document.getElementById("backToParent").innerHtml = "<a href='" + data.backto.Link + "'>Back to: " + data.backto.Label + "</a>";
+    var parentLink = document.getElementById("backToParent");
+    parentLink.innerHtml = "<a href='" + data.backto.Link + "'>Back to: " + data.backto.Label + "</a>";
     console.log("<a href='" + data.backto.Link + "'>Back to: " + data.backto.Label + "</a>");
 
     var i;
