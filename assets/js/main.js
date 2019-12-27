@@ -8,26 +8,26 @@ var sectionHeight = function() {
     } else {
       $section.css('height','auto');
     }
-  }
-  
-  $(window).resize(sectionHeight);
-
-  $(function() {
-    sectionHeight();
-  
-    $('img').on('load', sectionHeight);
-  })
-  
-  $(function() {
-    var navigationBuilder = function(data) {
-        document.getElementById("backToParent").innerHtml = "<a href='" + results.backto.Link + "'>" + results.backto.Label + "</a>";
-        var i;
-        for (i = 0; i < results.fellows.length; i++) {
-            $("nav ul").append("<li class='tag-h2'><a href='" + results.fellows[i].Link + "'>" + results.fellows[i].Label + "</a></li>");
-        }
-    
-        sectionHeight();
+}
+var navigationBuilder = function(data) {
+    document.getElementById("backToParent").innerHtml = "<a href='" + results.backto.Link + "'>" + results.backto.Label + "</a>";
+    var i;
+    for (i = 0; i < results.fellows.length; i++) {
+        $("nav ul").append("<li class='tag-h2'><a href='" + results.fellows[i].Link + "'>" + results.fellows[i].Label + "</a></li>");
     }
+
+    sectionHeight();
+}
+  
+$(window).resize(sectionHeight);
+
+$(function() {
+    sectionHeight();
+
+    $('img').on('load', sectionHeight);
+})
+  
+$(function() {
     var results = null;
     $.ajax({
         type: 'GET',
@@ -36,5 +36,4 @@ var sectionHeight = function() {
         success: navigationBuilder,
         async: true
     });
-    
-  });
+});
