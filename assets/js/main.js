@@ -11,3 +11,9 @@ var sectionHeight = function() {
 }
 
 $(window).resize(sectionHeight);
+
+$(function() {
+    sectionHeight();
+  
+    $('img').on('load', sectionHeight);
+  });
