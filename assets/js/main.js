@@ -11,9 +11,7 @@ var sectionHeight = function() {
 }
 var navigationBuilder = function(data) {
     var parentLink = document.getElementById("backToParent");
-    parentLink.innerHtml = "<a href='" + data.backto.Link + "'>Back to: " + data.backto.Label + "</a>";
-    console.log(parentLink.innerHtml);
-    console.log("<a href='" + data.backto.Link + "'>Back to: " + data.backto.Label + "</a>");
+    parentLink.innerHTML = "<a href='" + data.backto.Link + "'>Back to: " + data.backto.Label + "</a>";
 
     var i;
     for (i = 0; i < data.fellows.length; i++) {
