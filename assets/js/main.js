@@ -28,9 +28,10 @@ var sectionHeight = function() {
         async: false
     });
     $("nav p").innerHtml = "<a href='" + results.BackTo.Link + "'>" + results.BackTo.Label + "</a>";
-    results.fellows.each(function(){
-        $("nav ul").append("<li class='tag-h2'><a href='" + $(this).Link + "'>" + $(this).Label + "</a></li>");
-    })
+    var i;
+    for (i = 0; i < results.fellows.length; i++) {
+        $("nav ul").append("<li class='tag-h2'><a href='" + results.fellows[i].Link + "'>" + results.fellows[i].Label + "</a></li>");
+    }
   
     sectionHeight();
   });
