@@ -1,5 +1,3 @@
-# Github
-
 ## Repositories
 
 + [ADMF](https://github.com/ActiveDirectoryManagementFramework/ADMF/)
