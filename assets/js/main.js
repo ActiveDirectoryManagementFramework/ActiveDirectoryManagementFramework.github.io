@@ -10,10 +10,9 @@ var sectionHeight = function() {
     }
 }
 var navigationBuilder = function(data) {
-    document.getElementById("backToParent").innerHtml = "<a href='" + data.backto.Link + "'>" + data.backto.Label + "</a>";
-    $("nav p").each(function(){
-        $(this).innerHtml = "<a href='" + data.backto.Link + "'>" + data.backto.Label + "</a>";
-    })
+    document.getElementById("backToParent").innerHtml = "<a href='" + data.backto.Link + "'>Back to: " + data.backto.Label + "</a>";
+    console.log("<a href='" + data.backto.Link + "'>Back to: " + data.backto.Label + "</a>");
+
     var i;
     for (i = 0; i < data.fellows.length; i++) {
         $("nav ul").append("<li class='tag-h2'><a href='" + data.fellows[i].Link + "'>" + data.fellows[i].Label + "</a></li>");
