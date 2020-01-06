@@ -1,4 +1,4 @@
-$commandReferenceBasePath = "$($env:SYSTEM_DEFAULTWORKINGDIRECTORY)\documentation\commands"
+﻿$commandReferenceBasePath = "$($env:SYSTEM_DEFAULTWORKINGDIRECTORY)\documentation\commands"
 $modules = @("DomainManagement", "ForestManagement", "DCManagement", "ADMF")
 $excludedCommands = @()
 
