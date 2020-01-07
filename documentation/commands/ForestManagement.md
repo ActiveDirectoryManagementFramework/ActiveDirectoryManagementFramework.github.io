@@ -45,7 +45,7 @@
 
  - [Clear-FMConfiguration](ForestManagement/Clear-FMConfiguration.html)
  - [Get-FMCallback](ForestManagement/Get-FMCallback.html)
- - [Register-FMCallback](ForestManagement/Register-FMCallback.html)
- - [Unregister-FMCallback](ForestManagement/Unregister-FMCallback.html)
  - [Invoke-FMServer](ForestManagement/Invoke-FMServer.html)
+ - [Register-FMCallback](ForestManagement/Register-FMCallback.html)
  - [Test-FMServer](ForestManagement/Test-FMServer.html)
+ - [Unregister-FMCallback](ForestManagement/Unregister-FMCallback.html)
