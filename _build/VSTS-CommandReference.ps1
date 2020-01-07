@@ -56,6 +56,10 @@ foreach ($moduleName in $modules)
 "@
 			foreach ($command in ($group.Group | Sort-Object)) {
 				Add-Content -Path "$($commandReferenceBasePath)\$($moduleName).md" -Value " - [$command]($($moduleName)/$command.html)"
+				$navData.fellows += [PSCustomObject]@{
+					Label = $command
+					Link = "$command.html"
+				}
 			}
 		}
 
@@ -64,11 +68,17 @@ foreach ($moduleName in $modules)
 ## Other Commands
 
 "@
-		foreach ($command in ($theOthers.Group | Write-Output)) {
+		foreach ($command in ($theOthers.Group | Write-Output | Sort-Object)) {
 			Add-Content -Path "$($commandReferenceBasePath)\$($moduleName).md" -Value " - [$command]($($moduleName)/$command.html)"
+			$navData.fellows += [PSCustomObject]@{
+				Label = $command
+				Link = "$command.html"
+			}
 		}
 	}
 	#endregion Handling grouped module command references
+
+	$navData | ConvertTo-Json | Set-Content "$($commandReferenceBasePath)\nav.json"
 	Write-PSFMessage -Level Host -Message "Finished processing $moduleName"
 }
 
