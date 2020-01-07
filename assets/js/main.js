@@ -1,6 +1,7 @@
 var sectionHeight = function() {
     var total    = $(window).height(),
-        $section = $('section').css('height','auto');
+        $section = $('section').css('height','auto'),
+        $navSideBar = $("#navSidebar");
   
     if ($section.outerHeight(true) < total) {
       var margin = $section.outerHeight(true) - $section.height();
@@ -8,6 +9,7 @@ var sectionHeight = function() {
     } else {
       $section.css('height','auto');
     }
+    $navSideBar.height($section.height - 20)
 }
 var navigationBuilder = function(data) {
     document.getElementById("backToParent").innerHTML = "<a href='" + data.backto.Link + "'>Back to: " + data.backto.Label + "</a>";
