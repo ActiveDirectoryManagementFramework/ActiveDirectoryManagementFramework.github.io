@@ -78,7 +78,7 @@ foreach ($moduleName in $modules)
 	}
 	#endregion Handling grouped module command references
 
-	$navData | ConvertTo-Json | Set-Content "$($commandReferenceBasePath)\nav.json"
+	$navData | ConvertTo-Json | Set-Content "$($commandReferenceBasePath)\$($moduleName)\nav.json"
 	Write-PSFMessage -Level Host -Message "Finished processing $moduleName"
 }
 
