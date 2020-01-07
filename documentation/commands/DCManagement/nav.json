@@ -1,0 +1,20 @@
+{
+    "backto":  {
+                   "Link":  "../DCManagement.html",
+                   "Label":  "DCManagement"
+               },
+    "fellows":  [
+                    {
+                        "Label":  "Install-DCChildDomain",
+                        "Link":  "Install-DCChildDomain.html"
+                    },
+                    {
+                        "Label":  "Install-DCDomainController",
+                        "Link":  "Install-DCDomainController.html"
+                    },
+                    {
+                        "Label":  "Install-DCRootDomain",
+                        "Link":  "Install-DCRootDomain.html"
+                    }
+                ]
+}
