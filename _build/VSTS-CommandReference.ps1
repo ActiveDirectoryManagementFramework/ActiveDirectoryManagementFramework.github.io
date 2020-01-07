@@ -22,10 +22,53 @@ foreach ($moduleName in $modules)
 
 "@ -Encoding Ascii
 	
-	foreach ($command in $commands)
-	{
-		Add-Content -Path "$($commandReferenceBasePath)\$($moduleName).md" -Value " - [$command]($($moduleName)/$command.html)"
+	$navData = @{
+		backto = @{
+			Label = $moduleName
+			Link = "../$moduleName.html"
+		}
+		fellows = @()
 	}
+	#region Handling "regular" module command references
+	if ($moduleName -notin 'DomainManagement','ForestManagement') {
+		foreach ($command in $commands)
+		{
+			Add-Content -Path "$($commandReferenceBasePath)\$($moduleName).md" -Value " - [$command]($($moduleName)/$command.html)"
+			$navData.fellows += [PSCustomObject]@{
+				Label = $command
+				Link = "$command.html"
+			}
+		}
+	}
+	#endregion Handling "regular" module command references
+
+	#region Handling grouped module command references
+	else {
+		$grouped = $commands | Group-Object { $_ -replace '^.+?-(DM|FM)' }
+		$theOthers = $grouped | Where-Object Count -lt 5
+		foreach ($group in $grouped) {
+			if ($group.Count -lt 5) { continue }
+
+			Add-Content -Path "$($commandReferenceBasePath)\$($moduleName).md" -Value @"
+
+## $($group.Name)
+
+"@
+			foreach ($command in ($group.Group | Sort-Object)) {
+				Add-Content -Path "$($commandReferenceBasePath)\$($moduleName).md" -Value " - [$command]($($moduleName)/$command.html)"
+			}
+		}
+
+		Add-Content -Path "$($commandReferenceBasePath)\$($moduleName).md" -Value @"
+			
+## Other Commands
+
+"@
+		foreach ($command in ($theOthers.Group | Write-Output)) {
+			Add-Content -Path "$($commandReferenceBasePath)\$($moduleName).md" -Value " - [$command]($($moduleName)/$command.html)"
+		}
+	}
+	#endregion Handling grouped module command references
 	Write-PSFMessage -Level Host -Message "Finished processing $moduleName"
 }
 
