@@ -1,0 +1,32 @@
+{
+    "backto":  {
+        "Label":  "Components",
+        "Link":  "../components.html"
+    },
+    "fellows":  [
+        {
+            "Label":  "Schema (ldif)",
+            "Link":  "schema-ldif.html"
+        },
+        {
+            "Label":  "Schema",
+            "Link":  "schema.html"
+        },
+        {
+            "Label":  "Domain Controller Site-Assignment",
+            "Link":  "servers.html"
+        },
+        {
+            "Label":  "Sitelinks",
+            "Link":  "sitelinks.html"
+        },
+        {
+            "Label":  "Sites",
+            "Link":  "sites.html"
+        },
+        {
+            "Label":  "Subnets",
+            "Link":  "subnets.html"
+        }
+    ]
+}
