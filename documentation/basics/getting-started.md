@@ -23,6 +23,13 @@ If you need to move this code to an offline machine, you can download it and all
 Save-Module ADMF -Path .
 ```
 
+Then copy the files to the destination computer.
+For greatest convenience, place them in one of the paths returned by:
+
+```powershell
+$env:PSModulePath -split ";"
+```
+
 > Prerequisites:
 
 - PowerShell v5
