@@ -62,7 +62,12 @@ $acl = Get-AdsAcl -Path 'OU=UserAccounts,DC=contoso,DC=com'
 $acl.Access |
   Where-Object IdentityReference -eq 'contoso\Domain Admins' |
     Select-PSFObject @(
-        @{ Name='Path';Expression={$acl.DistinguishedName -replace 'DC=contoso,DC=com','%DomainDN%'}},
+        @{
+            Name = 'Path'
+            Expression = {
+                $acl.DistinguishedName -replace 'DC=contoso,DC=com','%DomainDN%'
+            }
+        },
         'ActiveDirectoryRights TO string',
         'InheritanceType TO string',
         'ObjectType',
