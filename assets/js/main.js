@@ -8,8 +8,9 @@ var sectionHeight = function() {
       $section.height(total - margin - 20);
     } else {
       $section.css('height','auto');
+      var margin = $section.outerHeight(true) - $section.height();
     }
-    $navSideBar.height(total - margin - 40)
+    $navSideBar.height(total - margin - 40);
 }
 var navigationBuilder = function(data) {
     document.getElementById("backToParent").innerHTML = "<a href='" + data.backto.Link + "'>Back to: " + data.backto.Label + "</a>";
