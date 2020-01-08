@@ -6,7 +6,7 @@ Welcome to the "Getting Started" guide of the Active Directory Management Framew
 We are here to get you started in as quick and painless a manner as we can.
 Still, it's a large and complex matter, so please bear with us.
 
-The basic idea is for you to define the state you desire - mostly in Json configuration files - and the ADMF makes it happen, or at least tests it.
+The basic idea is for you to define the state you desire - mostly in Json configuration files - and the ADMF makes it happen, or at least tests whether your domains conform to it.
 
 ## Installation
 
