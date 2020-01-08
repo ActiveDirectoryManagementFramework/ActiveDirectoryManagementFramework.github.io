@@ -2,6 +2,8 @@
 
 ## User Guide
 
++ [Getting Started](documentation/basics/getting-started.html)
+
 > Content Pending
 
 ## Command Reference

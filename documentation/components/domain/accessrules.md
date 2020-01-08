@@ -108,13 +108,13 @@ The actual permission granted.
 
 ### InheritanceType
 
-> Optional: Yes | Default: None
+Optional: Yes | Default: None
 
 How the permissions are affect child items.
 
 ### ObjectType
 
-> Optional: Yes | Default: `<All>`
+Optional: Yes | Default: `<All>`
 
 The type of objects to affect.
 
@@ -133,7 +133,7 @@ As custom object class may not have the same GUID in separate forests, using nam
 
 ### InheritedObjectType
 
-> Optional: Yes | Default: `<All>`
+Optional: Yes | Default: `<All>`
 
 A second object class or attribute reference required for this access rule.
 Depending on the `ActiveDirectoryRights` setting this property may represent different things (or not be used at all).
@@ -142,7 +142,7 @@ Same rules as ObjectType, accepts a GUID or its name-equivalent.
 
 ### AccessControlType
 
-> Optional: Yes | Default: Allow
+Optional: Yes | Default: Allow
 
 Whether this is an Allow or Deny rule.
 Legal Values:
@@ -165,7 +165,7 @@ This requires the parent to be a security principal (such as a user or computer 
 
 ### Optional
 
-> Optional: Yes | Default: false
+Optional: Yes | Default: false
 
 A boolean value, accepting either `true` or `false` (note: no quotes in json!).
 By default, the Domain Management module will complain about an object not existing when assigning an access rule to an object that ... well, doesn't exist.
