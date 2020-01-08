@@ -6,7 +6,29 @@ Welcome to the "Getting Started" guide of the Active Directory Management Framew
 We are here to get you started in as quick and painless a manner as we can.
 Still, it's a large and complex matter, so please bear with us.
 
-The basic concept is for you to define the state you desire - mostly in Json configuration files - and the ADMF makes it happen, or at least tests it.
+The basic idea is for you to define the state you desire - mostly in Json configuration files - and the ADMF makes it happen, or at least tests it.
+
+## Installation
+
+In order to install the ADMF, run the following PowerShell command on an internet facing computer:
+
+```powershell
+Install-Module ADMF
+```
+
+The ADMF itself does not require internet to work.
+If you need to move this code to an offline machine, you can download it and all its dependencies into the current path using the following command:
+
+```powershell
+Save-Module ADMF -Path .
+```
+
+> Prerequisites:
+
+- PowerShell v5
+- ActiveDirectory module
+
+The Active Directory PowerShell module can be installed using RSAT (Client OS) or the Server Manager (Server OS).
 
 ## Basic Concepts
 
@@ -15,19 +37,19 @@ For each [Component](../components/components.html) you want to define - site, o
 That means a context can define any number of different [Component](../components/components.html) types and any number of each.
 
 When you want to deploy, test or update a domain, you _load_ those [Contexts](contexts.html), and the settings they define will be used.
-You can combine any number of [Contexts](contexts.html), though you can also limit which cannot be combined with each other or that one context absolutely requires another context.
+You can combine any number of [Contexts](contexts.html), though you can also limit which [Contexts](contexts.html) cannot be combined with each other or that one [Context](contexts.html) absolutely requires another [Context](contexts.html).
 
 > Example Setup
 
-You define the following contexts:
+You define the following [Contexts](contexts.html):
 
 + Default
 + Production
 + QA
 + Development
 
-In the Context `Default` you would put the bulk of your domain configuration.
-In the Contexts `Production`, `QA` and `Development` you would define settings specific to each respective environment.
+In the [Context](contexts.html) `Default` you would put the bulk of your domain configuration.
+In the [Contexts](contexts.html) `Production`, `QA` and `Development` you would define settings specific to each respective environment.
 For example different Group Policy Objects defining different IPSec rules.
 
 ## The Categories
@@ -40,7 +62,7 @@ The ADMF separates the way it operates to three different categories, governed b
 
 ## Applying Configuration
 
-Now, you used the [Component guidance](../components/components.html) and the basics for [Context](contexts.html) management and are ready to use them against your domain?
+Now, you used the [Component guidance](../components/components.html) and the basics for [Context](contexts.html) management to define your own [Contexts](contexts.html) and are ready to use them against your domain?
 Alright, for this there exist four commands:
 
 ```powershell
@@ -57,7 +79,7 @@ The `Invoke-*`-commands will perform all these changes.
 > Categories: There are separate `Test-` and `Invoke-` commands per category. There is _not_ yet one available for Domain Controllers, as no settings implemented so far warrant this. That will change in the future however.
 
 The first time you run this command against a specific domain, a popup window will allow you to select the [Contexts](contexts.html) you wish to apply.
-If you want to avoid this - for example for unattended execution - you can use `Set-AdmfContext` to select the contexts to load.
+If you want to avoid this - for example for unattended execution - you can use `Set-AdmfContext` to select the [Contexts](contexts.html) to load.
 Once selected, the ADMF will remember the chosen [Context](contexts.html) until the end of the session.
 This is session-specific, so starting a new console will not be aware of a previous choice.
 
