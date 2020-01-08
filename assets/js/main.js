@@ -9,7 +9,7 @@ var sectionHeight = function() {
     } else {
       $section.css('height','auto');
     }
-    $navSideBar.height($section.height - 20)
+    $navSideBar.height(total - margin - 40)
 }
 var navigationBuilder = function(data) {
     document.getElementById("backToParent").innerHTML = "<a href='" + data.backto.Link + "'>Back to: " + data.backto.Label + "</a>";
