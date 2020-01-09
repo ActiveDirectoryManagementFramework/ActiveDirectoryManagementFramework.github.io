@@ -1,7 +1,7 @@
 ﻿# Callbacks
 
 The Callback system is a way to register a scriptblock that will execute each time any [Component](../components/components.html) is tested or invoked.
-This allows integrating logic, for example to validate configuration, prompt for user choice or other integrated logic.
+This allows integrating logic, for example to validate configuration, prompt for user choice or ... really anything else you want to trigger off it.
 
 > Originally, this was built to ensure the GUI [Context](contexts-advanced.html) prompt executes, when targeting a new domain.
 
