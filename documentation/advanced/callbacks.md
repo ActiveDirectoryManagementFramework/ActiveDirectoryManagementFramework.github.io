@@ -1,5 +1,7 @@
 ﻿# Callbacks
 
+## Description
+
 The Callback system is a way to register a scriptblock that will execute each time any [Component](../components/components.html) is tested or invoked.
 This allows integrating logic, for example to validate configuration, prompt for user choice or ... really anything else you want to trigger off it.
 
@@ -28,3 +30,30 @@ Commands to manage the callbacks:
 
 > Since the domain and forest Categories are implemented in separate, independent modules, each has its own callback handling.
 > However, both implementations are identical.
+
+## Example Callback
+
+```powershell
+$callbackScript = {
+	[CmdletBinding()]
+	param (
+		[AllowNull()]
+		$Server,
+		
+		[AllowNull()]
+		$Credential,
+		
+		[AllowNull()]
+		$ForestObject,
+		
+		[AllowNull()]
+		$DomainObject
+	)
+	
+	$parameters = $PSBoundParameters | ConvertTo-PSFHashtable -Include Server, Credential
+	if ($parameters.Server -eq '<Default Domain>') { $parameters.Server = $env:USERDNSDOMAIN }
+	Set-AdmfContext @parameters -Interactive -ReUse -EnableException
+}
+Register-DMCallback -Name ADMF -ScriptBlock $callbackScript
+Register-FMCallback -Name ADMF -ScriptBlock $callbackScript
+```
