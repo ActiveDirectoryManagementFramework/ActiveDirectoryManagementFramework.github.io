@@ -9,10 +9,6 @@
                         "Link":  "callbacks.html"
                     },
                     {
-                        "Label":  "Content Mode (Advanced)",
-                        "Link":  "contentmode-advanced.html"
-                    },
-                    {
                         "Label":  "Context Stores",
                         "Link":  "context-stores.html"
                     },

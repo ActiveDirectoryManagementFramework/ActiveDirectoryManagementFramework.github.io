@@ -13,7 +13,6 @@
 ## In Depth
 
 + [Callbacks](documentation/advanced/callbacks.html)
-+ [Content Mode (Advanced)](documentation/advanced/contentmode-advanced.html)
 + [Context Stores](documentation/advanced/context-stores.html)
 + [Contexts (Advanced)](documentation/advanced/contexts-advanced.html)
 + [Name Mapping](documentation/advanced/name-mapping.html)
