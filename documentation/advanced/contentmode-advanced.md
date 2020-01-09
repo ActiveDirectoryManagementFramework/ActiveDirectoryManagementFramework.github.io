@@ -1,1 +1,3 @@
-﻿> TODO: Add Content
+﻿# Content Mode (Advanced)
+
+> TODO: Add Content

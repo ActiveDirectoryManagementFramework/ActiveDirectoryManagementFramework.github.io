@@ -1,0 +1,20 @@
+﻿{
+    "backto":  {
+                   "Link":  "..\\..\\documentation.html",
+                   "Label":  "Documentation"
+               },
+    "fellows":  [
+                    {
+                        "Label":  "Content Mode Basics",
+                        "Link":  "contentmode.html"
+                    },
+                    {
+                        "Label":  "Context Basics",
+                        "Link":  "contexts.html"
+                    },
+                    {
+                        "Label":  "Getting Started",
+                        "Link":  "getting-started.html"
+                    }
+                ]
+}

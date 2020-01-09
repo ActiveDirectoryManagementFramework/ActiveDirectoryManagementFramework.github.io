@@ -1,0 +1,40 @@
+﻿{
+    "backto":  {
+                   "Link":  "..\\..\\documentation.html",
+                   "Label":  "Documentation"
+               },
+    "fellows":  [
+                    {
+                        "Label":  "Callbacks",
+                        "Link":  "callbacks.html"
+                    },
+                    {
+                        "Label":  "Content Mode (Advanced)",
+                        "Link":  "contentmode-advanced.html"
+                    },
+                    {
+                        "Label":  "Context Stores",
+                        "Link":  "context-stores.html"
+                    },
+                    {
+                        "Label":  "Contexts (Advanced)",
+                        "Link":  "contexts-advanced.html"
+                    },
+                    {
+                        "Label":  "Name Mapping",
+                        "Link":  "name-mapping.html"
+                    },
+                    {
+                        "Label":  "Processing Order",
+                        "Link":  "processing-order.html"
+                    },
+                    {
+                        "Label":  "Protocols",
+                        "Link":  "protocols.html"
+                    },
+                    {
+                        "Label":  "Schema Update: Privilege Management",
+                        "Link":  "schema-privilege-management.html"
+                    }
+                ]
+}
