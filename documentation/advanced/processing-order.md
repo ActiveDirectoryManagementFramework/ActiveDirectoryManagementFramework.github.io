@@ -15,7 +15,7 @@ If you use the provided invocation commands (`Invoke-AdmfDomain` and `Invoke-Adm
 Invoke-AdmfDomain
 ```
 
-> 1. Organizational Units: Crate & Update (Option: `OUSoft`)
+> 1. Organizational Units: Create & Update (Option: `OUSoft`)
 
 ```powershell
 Invoke-DMOrganizationalUnit

@@ -96,7 +96,7 @@ This parameter is mutually exclusive with `ObjectCategory`.
 The [Object Category](object-categories.html) to which the access rule applies.
 Object categories allow dynamically assigning permissions based on object conditions.
 
-However, they only consider objects [Under Management](../../advanced/contentmode-advanced.html).
+However, they only consider objects [Under Management](../../basics/contentmode.html).
 
 This is commonly used for targeting dynamic objects that are hard to match with a path, such as computer objects (could have different names in different domains), as well as meta-objects assigned to them (domain controller meta-objects, DFSR-objects, Virtual Machine SCP, ...).
 
