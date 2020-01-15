@@ -4,7 +4,7 @@
 
 Access Control Lists allow you to define owner and inheritance on any object desired. While this resource is managed by the DomainManagement module, it is possible to also define rules that apply to the configuration Naming Context.
 
-Any object, that has at least one such rule defined will be assumed to be fully defined. Access Control Lists that are not defined will be marked as not configured.
+Any object, that has at least one such rule defined will be assumed to be fully defined. Access Control Lists that are not defined will be marked as not configured. Also note that the warning is shown on [objects under management](../../basics/contentmode.html) that do not have an ACL definition.
 
 ## Example Configuration
 
