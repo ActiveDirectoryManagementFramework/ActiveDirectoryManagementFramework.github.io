@@ -43,15 +43,13 @@ Get-DMNameMapping
 
 For example, for the domain `corp.contoso.com` (sub-domain of `contoso.com`), these would be the default name mappings:
 
-```text
-%RootDomainFqdn% contoso.com
-%RootDomainName% contoso
-%DomainFqdn%     corp.contoso.com
-%RootDomainDN%   DC=contoso,DC=com
-%ForestFqdn%     contoso.com
-%DomainDN%       DC=corp,DC=contoso,DC=com
-%DomainName%     corp
-```
+| %RootDomainFqdn% | contoso.com |
+| %RootDomainName% | contoso |
+| %DomainFqdn% | corp.contoso.com |
+| %RootDomainDN% | DC=contoso,DC=com |
+| %ForestFqdn% | contoso.com |
+| %DomainDN% | DC=corp,DC=contoso,DC=com |
+| %DomainName% | corp |
 
 ## Defining Name Mappings
 
