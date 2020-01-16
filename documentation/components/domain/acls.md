@@ -21,7 +21,7 @@ A reasonably simple configuration entry:
 ]
 ```
 
-This rule will verify and if neccesarry set Administrators as owner and disable Inheritance of the custom Tiering Organizational Unit.
+This rule will verify and if neccesarry set Administrators as owner and disable Inheritance of the custom Tiering organizational unit.
 
 ## Properties
 
