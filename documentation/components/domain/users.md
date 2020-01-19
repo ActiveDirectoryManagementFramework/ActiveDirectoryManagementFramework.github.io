@@ -2,8 +2,7 @@
 
 ## Description
 
-Defintition of user which should be part of your domain configuration.
-
+Define user objects in configuration.
 
 ## Example Configuration
 
@@ -31,21 +30,29 @@ This configuration will create a new "Tier 0" admin account for John Smith at th
 
 ### SamAccountName
 
+> This parameter uses [name resolution](../../advanced/name-mapping.html).
+
 The name of the user object.
 
 ### GivenName
 
-Optional: Yes | Default: false
+> This parameter uses [name resolution](../../advanced/name-mapping.html).
+
+Optional: Yes | Default: $null
 
 The given name of the object.
 
 ### Surname
 
-Optional: Yes | Default: false
+> This parameter uses [name resolution](../../advanced/name-mapping.html).
 
-The surename (Family Name) of the object.
+Optional: Yes | Default: $null
+
+The surname (sn / Family Name) of the object.
 
 ### Description
+
+> This parameter uses [name resolution](../../advanced/name-mapping.html).
 
 The description of the user account. This is required and should describe the purpose / use of the account.
 
@@ -69,12 +76,18 @@ The organizational unit the user should be placed in.
 
 ### OldNames
 
-Optional: Yes | Default: false
+> This parameter uses [name resolution](../../advanced/name-mapping.html).
 
-Previous names the user object had. Will trigger a rename if a user is found under one of the old names but not the current one.
+Optional: Yes | Default: @()
+
+Previous names the user object had.
+Will trigger a rename if a user is found under one of the old names but not the current one.
+
+> If for some reason more than one of the old names is in use, rename will fail and an error entry is generated
 
 ### Present
 
-Optional: Yes | Default: false
+Optional: Yes | Default: true
 
-Whether the user should be present. This can be used to trigger deletion of a managed account.
+Whether the user should be present.
+This can be used to trigger deletion of a managed account.
