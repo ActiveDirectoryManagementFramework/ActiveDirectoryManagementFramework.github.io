@@ -16,7 +16,7 @@ Sites cannot be deleted, so long as at least a single domain controller is assig
     {
         "Name":  "ContosoEU",
         "Description":  "Contoso Datacenter in Europe",
-        "Location":  "EU CON - Germany, Frankfurt"
+        "Location":  "Europe > Germany > Frankfurt"
     }
 ]
 ```
