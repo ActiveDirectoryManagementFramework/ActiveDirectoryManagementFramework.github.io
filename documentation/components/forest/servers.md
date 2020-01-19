@@ -16,7 +16,7 @@ That means, a domain controller assigned to a site with a fitting subnet will _n
 
 ## Sites and Domain Controller Site-Assignment
 
-When applying Forest level configuration [in the proper order](../../advanced/processing-order.html), [sites](sites.html) are created (and [subnets](subnets.html) defined) before assigning domain controllers to their site.
+When applying Forest level configuration [in the proper order](../../advanced/processing-order.html), [sites](sites.html) are created (and [subnets](subnets.html) defined) before assigning [domain controllers](servers.html) to their site.
 
 That way, when setting up a new forest, we first create the necessary infrastructure before trying to fit the DCs into the correct slot.
 The one problem this causes is when trying to delete an undesired site that still has a domain controller assigned.
