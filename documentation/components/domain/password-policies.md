@@ -2,20 +2,36 @@
 
 ## Description
 
-> Add Content
+> Define Finegrained Password Policies objects in configuration.
 
 ## Example Configuration
 
 > Add Content
 
 ```json
-
+[
+    {
+        "Name":  "PSO-T0-Accounts",
+        "DisplayName":  "Password Policies Object for tier 0 Accounts",
+        "Description":  "Will be applied to all tier 0 Accounts",
+        "MinPasswordLength":  30,
+        "SubjectGroup":  "PSO-Policy-T0-Accounts",
+        "LockoutThreshold":  5,
+        "MaxPasswordAge":  "90.00:00:00",
+        "ComplexityEnabled":  true,
+        "LockoutDuration":  "00:30:00",
+        "LockoutObservationWindow":  "00:30:00",
+        "MinPasswordAge":  "1.00:00:00",
+        "PasswordHistoryCount":  24
+    }
+]
 ```
 
 ## Tools
 
 ```powershell
-
+    $PSOs = Get-ADFineGrainedPasswordPolicy -Filter * | Select-Object *
+    $PSOs | Select-PSFObject Name, Displayname, Description, MinPasswordLength, SubjectGroup, LockoutThreshold, "MaxPasswordAge TO String", ComplexityEnabled, "LockoutDuration TO String", "LockoutObservationWindow TO String", "MinPasswordAge TO String", PasswordHistoryCount | ConvertTo-Json
 ```
 
 ## Properties
