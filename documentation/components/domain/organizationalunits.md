@@ -12,16 +12,6 @@
 [
     {
         "Name":  "Admins",
-        "Description":  "Will be applied to all tier 0 Accounts",
-        "MinPasswordLength":  30,
-        "SubjectGroup":  "PSO-Policy-T0-Accounts",
-        "LockoutThreshold":  5,
-        "MaxPasswordAge":  "90.00:00:00",
-        "ComplexityEnabled":  true,
-        "LockoutDuration":  "00:30:00",
-        "LockoutObservationWindow":  "00:30:00",
-        "MinPasswordAge":  "1.00:00:00",
-        "PasswordHistoryCount":  24
     }
 ]
 ```
