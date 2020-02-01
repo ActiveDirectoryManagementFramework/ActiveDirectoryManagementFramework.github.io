@@ -6,8 +6,6 @@
 
 ## Example Configuration
 
-> Add Content
-
 ```json
 [
     {
@@ -30,8 +28,21 @@
 ## Tools
 
 ```powershell
-    $PSOs = Get-ADFineGrainedPasswordPolicy -Filter * | Select-Object *
-    $PSOs | Select-PSFObject Name, Displayname, Description, MinPasswordLength, SubjectGroup, LockoutThreshold, "MaxPasswordAge TO String", ComplexityEnabled, "LockoutDuration TO String", "LockoutObservationWindow TO String", "MinPasswordAge TO String", PasswordHistoryCount | ConvertTo-Json
+$PSOs = Get-ADFineGrainedPasswordPolicy -Filter * | Select-Object *
+$PSOs | Select-PSFObject @(
+    'Name'
+    'Displayname'
+    'Description'
+    'MinPasswordLength'
+    'SubjectGroup'
+    'LockoutThreshold'
+    'MaxPasswordAge TO String'
+    'ComplexityEnabled'
+    'LockoutDuration TO String'
+    'LockoutObservationWindow TO String'
+    'MinPasswordAge TO String'
+    'PasswordHistoryCount'
+) | ConvertTo-Json
 ```
 
 ## Properties
