@@ -22,6 +22,7 @@ A few object types can be used for both however (Access Rules, Custom AD Objects
 + [Group Policy Links](domain/gplinks.html)
 + [Group Policy Permissions](domain/gppermissions.html)
 + [Group Policy Permission Filters](domain/gppermissionfilters.html)
++ [Group Policy Registry Settings](domain/gpregistrysettings.html)
 + [Group-Memberships](domain/groupmemberships.html)
 + [Group Policy Objects](domain/grouppolicies.html)
 + [Groups](domain/groups.html)

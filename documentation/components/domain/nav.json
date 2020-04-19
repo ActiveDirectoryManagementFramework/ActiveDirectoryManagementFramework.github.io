@@ -25,6 +25,10 @@
             "Link":  "gppermissionfilters.html"
         },
         {
+            "Label":  "Group Policy Registry Settings",
+            "Link":  "gpregistrysettings.html"
+        },
+        {
             "Label":  "Group-Memberships",
             "Link":  "groupmemberships.html"
         },
