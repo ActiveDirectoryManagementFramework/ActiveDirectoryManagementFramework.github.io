@@ -19,7 +19,7 @@ A few object types can be used for both however (Access Rules, Custom AD Objects
 
 + [AccessRules](domain/accessrules.html)
 + [Acls](domain/acls.html)
-+ [Domain Data](domain(domaindata.html))
++ [Domain Data](domain/domaindata.html))
 + [Group Policy Links](domain/gplinks.html)
 + [Group Policy Permissions](domain/gppermissions.html)
 + [Group Policy Permission Filters](domain/gppermissionfilters.html)
