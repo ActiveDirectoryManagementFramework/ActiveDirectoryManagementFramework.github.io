@@ -65,6 +65,26 @@
                         "Link":  "Unregister-DMGPLink.html"
                     },
                     {
+                        "Label":  "Get-DMGPPermission",
+                        "Link":  "Get-DMGPPermission.html"
+                    },
+                    {
+                        "Label":  "Invoke-DMGPPermission",
+                        "Link":  "Invoke-DMGPPermission.html"
+                    },
+                    {
+                        "Label":  "Register-DMGPPermission",
+                        "Link":  "Register-DMGPPermission.html"
+                    },
+                    {
+                        "Label":  "Test-DMGPPermission",
+                        "Link":  "Test-DMGPPermission.html"
+                    },
+                    {
+                        "Label":  "Unregister-DMGPPermission",
+                        "Link":  "Unregister-DMGPPermission.html"
+                    },
+                    {
                         "Label":  "Get-DMGroup",
                         "Link":  "Get-DMGroup.html"
                     },
@@ -225,6 +245,18 @@
                         "Link":  "Get-DMDomainCredential.html"
                     },
                     {
+                        "Label":  "Get-DMDomainData",
+                        "Link":  "Get-DMDomainData.html"
+                    },
+                    {
+                        "Label":  "Get-DMGPPermissionFilter",
+                        "Link":  "Get-DMGPPermissionFilter.html"
+                    },
+                    {
+                        "Label":  "Get-DMGPRegistrySetting",
+                        "Link":  "Get-DMGPRegistrySetting.html"
+                    },
+                    {
                         "Label":  "Get-DMNameMapping",
                         "Link":  "Get-DMNameMapping.html"
                     },
@@ -237,12 +269,28 @@
                         "Link":  "Get-DMObjectDefaultPermission.html"
                     },
                     {
+                        "Label":  "Invoke-DMDomainData",
+                        "Link":  "Invoke-DMDomainData.html"
+                    },
+                    {
                         "Label":  "Register-DMBuiltInSID",
                         "Link":  "Register-DMBuiltInSID.html"
                     },
                     {
                         "Label":  "Register-DMCallback",
                         "Link":  "Register-DMCallback.html"
+                    },
+                    {
+                        "Label":  "Register-DMDomainData",
+                        "Link":  "Register-DMDomainData.html"
+                    },
+                    {
+                        "Label":  "Register-DMGPPermissionFilter",
+                        "Link":  "Register-DMGPPermissionFilter.html"
+                    },
+                    {
+                        "Label":  "Register-DMGPRegistrySetting",
+                        "Link":  "Register-DMGPRegistrySetting.html"
                     },
                     {
                         "Label":  "Register-DMNameMapping",
@@ -273,8 +321,24 @@
                         "Link":  "Set-DMRedForestContext.html"
                     },
                     {
+                        "Label":  "Test-DMGPRegistrySetting",
+                        "Link":  "Test-DMGPRegistrySetting.html"
+                    },
+                    {
                         "Label":  "Unregister-DMCallback",
                         "Link":  "Unregister-DMCallback.html"
+                    },
+                    {
+                        "Label":  "Unregister-DMDomainData",
+                        "Link":  "Unregister-DMDomainData.html"
+                    },
+                    {
+                        "Label":  "Unregister-DMGPPermissionFilter",
+                        "Link":  "Unregister-DMGPPermissionFilter.html"
+                    },
+                    {
+                        "Label":  "Unregister-DMGPRegistrySetting",
+                        "Link":  "Unregister-DMGPRegistrySetting.html"
                     },
                     {
                         "Label":  "Unregister-DMNameMapping",

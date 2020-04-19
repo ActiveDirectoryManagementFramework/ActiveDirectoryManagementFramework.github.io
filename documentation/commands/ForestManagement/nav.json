@@ -5,6 +5,26 @@
                },
     "fellows":  [
                     {
+                        "Label":  "Get-FMNTAuthStore",
+                        "Link":  "Get-FMNTAuthStore.html"
+                    },
+                    {
+                        "Label":  "Invoke-FMNTAuthStore",
+                        "Link":  "Invoke-FMNTAuthStore.html"
+                    },
+                    {
+                        "Label":  "Register-FMNTAuthStore",
+                        "Link":  "Register-FMNTAuthStore.html"
+                    },
+                    {
+                        "Label":  "Test-FMNTAuthStore",
+                        "Link":  "Test-FMNTAuthStore.html"
+                    },
+                    {
+                        "Label":  "Unregister-FMNTAuthStore",
+                        "Link":  "Unregister-FMNTAuthStore.html"
+                    },
+                    {
                         "Label":  "Get-FMSchema",
                         "Link":  "Get-FMSchema.html"
                     },

@@ -13,8 +13,8 @@ Applies the desired group memberships to the target domain.
 ## SYNTAX
 
 ```
-Invoke-DMGroupMembership [-RemoveUnidentified] [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>]
- [-EnableException] [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-DMGroupMembership [[-InputObject] <Object>] [-RemoveUnidentified] [[-Server] <ComputerParameter>]
+ [[-Credential] <PSCredential>] [-EnableException] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,6 +32,22 @@ Invoke-DMGroupMembership -Server contoso.com
 Applies the desired group membership configuration to the contoso.com domain
 
 ## PARAMETERS
+
+### -InputObject
+Test results provided by the associated test command.
+Only the provided changes will be executed, unless none were specified, in which ALL pending changes will be executed.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
 
 ### -RemoveUnidentified
 By default, existing permissions for foreign security principals that cannot be resolved will only be deleted, if every single configured membership was resolveable.
@@ -59,7 +75,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 1
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -74,7 +90,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 2
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

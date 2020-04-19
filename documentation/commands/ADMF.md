@@ -7,6 +7,7 @@
  - [Invoke-AdmfForest](ADMF/Invoke-AdmfForest.html)
  - [New-AdmfContext](ADMF/New-AdmfContext.html)
  - [New-AdmfContextStore](ADMF/New-AdmfContextStore.html)
+ - [Register-AdmfCredentialProvider](ADMF/Register-AdmfCredentialProvider.html)
  - [Set-AdmfContext](ADMF/Set-AdmfContext.html)
  - [Test-AdmfDomain](ADMF/Test-AdmfDomain.html)
  - [Test-AdmfForest](ADMF/Test-AdmfForest.html)

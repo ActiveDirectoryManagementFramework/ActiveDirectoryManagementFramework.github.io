@@ -14,7 +14,7 @@ Tests a domain for its domain level content and whether it matches the desired s
 
 ```
 Test-AdmfDomain [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>]
- [[-Options] <UpdateDomainOptions[]>] [<CommonParameters>]
+ [[-Options] <UpdateDomainOptions[]>] [[-CredentialProvider] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,6 +76,22 @@ Accepted values: AccessRule, Acl, GPLink, GPPermission, GroupPolicy, GroupMember
 Required: False
 Position: 3
 Default value: All
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CredentialProvider
+The credential provider to use to resolve the input credentials.
+See help on Register-AdmfCredentialProvider for details.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 4
+Default value: Default
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

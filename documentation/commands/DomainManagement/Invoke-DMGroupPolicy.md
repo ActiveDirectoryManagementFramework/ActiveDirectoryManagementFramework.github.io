@@ -13,15 +13,15 @@ Brings the group policy settings into compliance with the desired state.
 ## SYNTAX
 
 ```
-Invoke-DMGroupPolicy [-Delete] [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>]
- [-EnableException] [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-DMGroupPolicy [[-InputObject] <Object>] [-Delete] [[-Server] <ComputerParameter>]
+ [[-Credential] <PSCredential>] [-EnableException] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Brings the group policy settings into compliance with the desired state.
 Define the desired state by using Register-DMGroupPolicy.
 Note: The original export will need to be carefully crafted to fit this system.
-TODO: Add definition on how to provide the GPO export,
+Use the ADMF module's Export-AdmfGpo command to generate the gpo definition from an existing deployment.
 
 ## EXAMPLES
 
@@ -41,6 +41,22 @@ Brings the group policy settings from the domain fabrikam.com into compliance wi
 Will also delete all deprecated policies linked to the managed infrastructure.
 
 ## PARAMETERS
+
+### -InputObject
+Test results provided by the associated test command.
+Only the provided changes will be executed, unless none were specified, in which ALL pending changes will be executed.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
 
 ### -Delete
 By default, this command will NOT delete group policies, in order to avoid accidentally locking yourself out of the system.
@@ -67,7 +83,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 1
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -82,7 +98,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 2
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

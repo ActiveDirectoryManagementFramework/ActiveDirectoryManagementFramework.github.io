@@ -1,41 +1,42 @@
 ---
-external help file: ADMF-help.xml
-Module Name: ADMF
+external help file: DomainManagement-help.xml
+Module Name: DomainManagement
 online version:
 schema: 2.0.0
 ---
 
-# Test-AdmfForest
+# Get-DMGPPermission
 
 ## SYNOPSIS
-Tests whether a forest is configured according to baseline configuration
+Lists registered GP permission rules.
 
 ## SYNTAX
 
 ```
-Test-AdmfForest [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>]
- [[-Options] <UpdateForestOptions[]>] [[-CredentialProvider] <String>] [<CommonParameters>]
+Get-DMGPPermission [[-GpoName] <String>] [[-Identity] <String>] [[-Filter] <String>] [-IsGlobal]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Tests whether a forest is configured according to baseline configuration
+Lists registered GP permission rules.
+These represent the desired state for how access to Group Policy Objects should be configured.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-Test-AdmfForest
+Get-DMGPPermmission
 ```
 
-Test the current forest for baseline compliance.
+Returns all registered permissions.
 
 ## PARAMETERS
 
-### -Server
-The server / domain to work with.
+### -GpoName
+The name of the GPO the rule was assigned to.
 
 ```yaml
-Type: ComputerParameter
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -46,11 +47,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Credential
-The credentials to use for this operation.
+### -Identity
+The name of trustee receiving permissions.
 
 ```yaml
-Type: PSCredential
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -61,26 +62,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Options
-What tests to execute.
-Defaults to all tests.
-
-```yaml
-Type: UpdateForestOptions[]
-Parameter Sets: (All)
-Aliases:
-Accepted values: Sites, Subnets, SiteLinks, Topology, ServerRelocate, Schema, SchemaLdif, AllSchema, NTAuthStore, Default, All
-
-Required: False
-Position: 3
-Default value: All
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CredentialProvider
-The credential provider to use to resolve the input credentials.
-See help on Register-AdmfCredentialProvider for details.
+### -Filter
+The filter string assigned to the access rule to return.
 
 ```yaml
 Type: String
@@ -88,8 +71,23 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 4
-Default value: Default
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsGlobal
+Only return rules that apply to ALL GPOs globally.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

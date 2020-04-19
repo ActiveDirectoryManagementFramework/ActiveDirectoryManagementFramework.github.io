@@ -1,39 +1,41 @@
 ---
-external help file: DomainManagement-help.xml
-Module Name: DomainManagement
+external help file: ForestManagement-help.xml
+Module Name: ForestManagement
 online version:
 schema: 2.0.0
 ---
 
-# Invoke-DMGroup
+# Invoke-FMNTAuthStore
 
 ## SYNOPSIS
-Updates the group configuration of a domain to conform to the configured state.
+Applies the desired certificates to the NTAuth store.
 
 ## SYNTAX
 
 ```
-Invoke-DMGroup [[-InputObject] <Object>] [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>]
+Invoke-FMNTAuthStore [[-InputObject] <Object>] [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>]
  [-EnableException] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Updates the group configuration of a domain to conform to the configured state.
+Applies the desired certificates to the NTAuth store.
+This allows distributing certificates that are trusted across the entire forest.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-Innvoke-DMGroup -Server contoso.com
+Invoke-FMNTAuthStore -Server contoso.com
 ```
 
-Updates the groups in the domain contoso.com to conform to configuration
+Applies the defined NTAuthStore configuration to the contoso.com domain.
 
 ## PARAMETERS
 
 ### -InputObject
-Test results provided by the associated test command.
-Only the provided changes will be executed, unless none were specified, in which ALL pending changes will be executed.
+The test results to apply.
+Only specify objects returned by Test-FMNTAuthStore.
+By default, if you do not specify this parameter it will run the test and apply all deltas found.
 
 ```yaml
 Type: Object

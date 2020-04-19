@@ -14,7 +14,8 @@ Applies the currently desired configuration to the targeted forest.
 
 ```
 Invoke-AdmfForest [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>]
- [[-Options] <UpdateForestOptions[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-Options] <UpdateForestOptions[]>] [[-CredentialProvider] <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -77,10 +78,26 @@ To update everything, use "All".
 Type: UpdateForestOptions[]
 Parameter Sets: (All)
 Aliases:
-Accepted values: Sites, Subnets, SiteLinks, Topology, Default, ServerRelocate, Schema, SchemaLdif, AllSchema, All
+Accepted values: Sites, Subnets, SiteLinks, Topology, ServerRelocate, Schema, SchemaLdif, AllSchema, NTAuthStore, Default, All
 
 Required: False
 Position: 3
+Default value: Default
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CredentialProvider
+The credential provider to use to resolve the input credentials.
+See help on Register-AdmfCredentialProvider for details.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 4
 Default value: Default
 Accept pipeline input: False
 Accept wildcard characters: False

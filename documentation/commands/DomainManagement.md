@@ -25,6 +25,14 @@
  - [Test-DMGPLink](DomainManagement/Test-DMGPLink.html)
  - [Unregister-DMGPLink](DomainManagement/Unregister-DMGPLink.html)
 
+## GPPermission
+
+ - [Get-DMGPPermission](DomainManagement/Get-DMGPPermission.html)
+ - [Invoke-DMGPPermission](DomainManagement/Invoke-DMGPPermission.html)
+ - [Register-DMGPPermission](DomainManagement/Register-DMGPPermission.html)
+ - [Test-DMGPPermission](DomainManagement/Test-DMGPPermission.html)
+ - [Unregister-DMGPPermission](DomainManagement/Unregister-DMGPPermission.html)
+
 ## Group
 
  - [Get-DMGroup](DomainManagement/Get-DMGroup.html)
@@ -88,11 +96,18 @@
  - [Get-DMCallback](DomainManagement/Get-DMCallback.html)
  - [Get-DMContentMode](DomainManagement/Get-DMContentMode.html)
  - [Get-DMDomainCredential](DomainManagement/Get-DMDomainCredential.html)
+ - [Get-DMDomainData](DomainManagement/Get-DMDomainData.html)
+ - [Get-DMGPPermissionFilter](DomainManagement/Get-DMGPPermissionFilter.html)
+ - [Get-DMGPRegistrySetting](DomainManagement/Get-DMGPRegistrySetting.html)
  - [Get-DMNameMapping](DomainManagement/Get-DMNameMapping.html)
  - [Get-DMObjectCategory](DomainManagement/Get-DMObjectCategory.html)
  - [Get-DMObjectDefaultPermission](DomainManagement/Get-DMObjectDefaultPermission.html)
+ - [Invoke-DMDomainData](DomainManagement/Invoke-DMDomainData.html)
  - [Register-DMBuiltInSID](DomainManagement/Register-DMBuiltInSID.html)
  - [Register-DMCallback](DomainManagement/Register-DMCallback.html)
+ - [Register-DMDomainData](DomainManagement/Register-DMDomainData.html)
+ - [Register-DMGPPermissionFilter](DomainManagement/Register-DMGPPermissionFilter.html)
+ - [Register-DMGPRegistrySetting](DomainManagement/Register-DMGPRegistrySetting.html)
  - [Register-DMNameMapping](DomainManagement/Register-DMNameMapping.html)
  - [Register-DMObjectCategory](DomainManagement/Register-DMObjectCategory.html)
  - [Resolve-DMObjectCategory](DomainManagement/Resolve-DMObjectCategory.html)
@@ -100,6 +115,10 @@
  - [Set-DMDomainContext](DomainManagement/Set-DMDomainContext.html)
  - [Set-DMDomainCredential](DomainManagement/Set-DMDomainCredential.html)
  - [Set-DMRedForestContext](DomainManagement/Set-DMRedForestContext.html)
+ - [Test-DMGPRegistrySetting](DomainManagement/Test-DMGPRegistrySetting.html)
  - [Unregister-DMCallback](DomainManagement/Unregister-DMCallback.html)
+ - [Unregister-DMDomainData](DomainManagement/Unregister-DMDomainData.html)
+ - [Unregister-DMGPPermissionFilter](DomainManagement/Unregister-DMGPPermissionFilter.html)
+ - [Unregister-DMGPRegistrySetting](DomainManagement/Unregister-DMGPRegistrySetting.html)
  - [Unregister-DMNameMapping](DomainManagement/Unregister-DMNameMapping.html)
  - [Unregister-DMObjectCategory](DomainManagement/Unregister-DMObjectCategory.html)

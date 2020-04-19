@@ -5,38 +5,39 @@ online version:
 schema: 2.0.0
 ---
 
-# Invoke-DMGroup
+# Invoke-DMDomainData
 
 ## SYNOPSIS
-Updates the group configuration of a domain to conform to the configured state.
+Gathers domain specific data.
 
 ## SYNTAX
 
 ```
-Invoke-DMGroup [[-InputObject] <Object>] [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>]
- [-EnableException] [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-DMDomainData [[-Name] <String>] [-Reset] [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>]
+ [-EnableException] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Updates the group configuration of a domain to conform to the configured state.
+Gathers domain specific data.
+The gathering scripts are supplied using Register-DMDomainData.
+The data is currently consumed only by the extended group policy Component.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-Innvoke-DMGroup -Server contoso.com
+Invoke-DMDomainData @parameters -Name PKIServer
 ```
 
-Updates the groups in the domain contoso.com to conform to configuration
+Executes the scriptblock stored as PKIServer against the targeted domain.
 
 ## PARAMETERS
 
-### -InputObject
-Test results provided by the associated test command.
-Only the provided changes will be executed, unless none were specified, in which ALL pending changes will be executed.
+### -Name
+Name of the registered scriptblock to invoke.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -44,6 +45,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Reset
+Disable retrieving data from cache.
+By default, all data is cached on a per-domain basis.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -89,36 +106,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-If this switch is enabled, no actions are performed but informational messages will be displayed that explain what would happen if the command were to run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-If this switch is enabled, you will be prompted for confirmation before executing any operations that change state.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

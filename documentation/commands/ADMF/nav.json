@@ -33,6 +33,10 @@
                         "Link":  "New-AdmfContextStore.html"
                     },
                     {
+                        "Label":  "Register-AdmfCredentialProvider",
+                        "Link":  "Register-AdmfCredentialProvider.html"
+                    },
+                    {
                         "Label":  "Set-AdmfContext",
                         "Link":  "Set-AdmfContext.html"
                     },

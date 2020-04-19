@@ -14,14 +14,14 @@ Applies a set of configuration contexts.
 
 ### name (Default)
 ```
-Set-AdmfContext -Context <Object[]> [-ReUse] [-Server <String>] [-Credential <PSCredential>] [-EnableException]
- [<CommonParameters>]
+Set-AdmfContext -Context <Object[]> [-ReUse] [-Server <ComputerParameter>] [-Credential <PSCredential>]
+ [-EnableException] [<CommonParameters>]
 ```
 
 ### interactive
 ```
-Set-AdmfContext [-Interactive] [-ReUse] [-Server <String>] [-Credential <PSCredential>] [-EnableException]
- [<CommonParameters>]
+Set-AdmfContext [-Interactive] [-ReUse] [-Server <ComputerParameter>] [-Credential <PSCredential>]
+ [-EnableException] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 The server / domain to work with.
 
 ```yaml
-Type: String
+Type: ComputerParameter
 Parameter Sets: (All)
 Aliases:
 

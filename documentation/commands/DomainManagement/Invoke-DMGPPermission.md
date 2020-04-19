@@ -5,29 +5,34 @@ online version:
 schema: 2.0.0
 ---
 
-# Invoke-DMGroup
+# Invoke-DMGPPermission
 
 ## SYNOPSIS
-Updates the group configuration of a domain to conform to the configured state.
+Brings the current Group Policy Permissions into compliance with the desired state defined in configuration.
 
 ## SYNTAX
 
 ```
-Invoke-DMGroup [[-InputObject] <Object>] [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>]
+Invoke-DMGPPermission [[-InputObject] <Object>] [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>]
  [-EnableException] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Updates the group configuration of a domain to conform to the configured state.
+Brings the current Group Policy Permissions into compliance with the desired state defined in configuration.
+- Use Register-DMGPPermission and Register-DMGPPermissionFilter to define the desired state
+- Use Test-DMGPPermission to preview the changes it would apply
+
+This command accepts the output objects of Test-DMGPPermission as input, allowing you to precisely define, which changes to actually apply.
+If you do not do so, ALL deviations from the desired state will be corrected.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-Innvoke-DMGroup -Server contoso.com
+Invoke-DMGPPermission -Server corp.contoso.com
 ```
 
-Updates the groups in the domain contoso.com to conform to configuration
+Brings the group policy object permissions of the domain corp.contoso.com into compliance with the desired state.
 
 ## PARAMETERS
 

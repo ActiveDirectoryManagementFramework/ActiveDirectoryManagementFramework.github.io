@@ -1,33 +1,34 @@
 ---
-external help file: ADMF-help.xml
-Module Name: ADMF
+external help file: DomainManagement-help.xml
+Module Name: DomainManagement
 online version:
 schema: 2.0.0
 ---
 
-# Test-AdmfForest
+# Test-DMGPPermission
 
 ## SYNOPSIS
-Tests whether a forest is configured according to baseline configuration
+Tests whether the existing Group Policy permissions reflect the desired state.
 
 ## SYNTAX
 
 ```
-Test-AdmfForest [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>]
- [[-Options] <UpdateForestOptions[]>] [[-CredentialProvider] <String>] [<CommonParameters>]
+Test-DMGPPermission [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>] [-EnableException]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Tests whether a forest is configured according to baseline configuration
+Tests whether the existing Group Policy permissions reflect the desired state.
+Use Register-DMGPPermission and Register-DMGPPermissionFilter to define the desired state.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-Test-AdmfForest
+Test-DMGPPermission -Server corp.contoso.com
 ```
 
-Test the current forest for baseline compliance.
+Tests whether the domain of corp.contoso.com has the desired GP Permission configuration.
 
 ## PARAMETERS
 
@@ -61,35 +62,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Options
-What tests to execute.
-Defaults to all tests.
+### -EnableException
+This parameters disables user-friendly warnings and enables the throwing of exceptions.
+This is less user friendly, but allows catching exceptions in calling scripts.
 
 ```yaml
-Type: UpdateForestOptions[]
-Parameter Sets: (All)
-Aliases:
-Accepted values: Sites, Subnets, SiteLinks, Topology, ServerRelocate, Schema, SchemaLdif, AllSchema, NTAuthStore, Default, All
-
-Required: False
-Position: 3
-Default value: All
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CredentialProvider
-The credential provider to use to resolve the input credentials.
-See help on Register-AdmfCredentialProvider for details.
-
-```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 4
-Default value: Default
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -13,8 +13,8 @@ Updates the organizational units of a domain to be compliant with the desired st
 ## SYNTAX
 
 ```
-Invoke-DMOrganizationalUnit [-Delete] [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>]
- [-EnableException] [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-DMOrganizationalUnit [[-InputObject] <Object>] [-Delete] [[-Server] <ComputerParameter>]
+ [[-Credential] <PSCredential>] [-EnableException] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,6 +32,22 @@ Invoke-DMOrganizationalUnit -Server contoso.com
 Brings the domain contoso.com into OU compliance.
 
 ## PARAMETERS
+
+### -InputObject
+Test results provided by the associated test command.
+Only the provided changes will be executed, unless none were specified, in which ALL pending changes will be executed.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
 
 ### -Delete
 Implement deletion commands.
@@ -61,7 +77,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 1
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -76,7 +92,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 2
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

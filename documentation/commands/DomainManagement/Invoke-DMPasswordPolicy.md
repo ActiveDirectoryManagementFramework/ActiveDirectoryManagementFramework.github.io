@@ -13,8 +13,8 @@ Applies the defined, desired state for finegrained password policies (PSOs)
 ## SYNTAX
 
 ```
-Invoke-DMPasswordPolicy [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>] [-EnableException]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-DMPasswordPolicy [[-InputObject] <Object>] [[-Server] <ComputerParameter>]
+ [[-Credential] <PSCredential>] [-EnableException] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,6 +32,22 @@ Applies the currently defined baseline for password policies to the current doma
 
 ## PARAMETERS
 
+### -InputObject
+Test results provided by the associated test command.
+Only the provided changes will be executed, unless none were specified, in which ALL pending changes will be executed.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -Server
 The server / domain to work with.
 
@@ -41,7 +57,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 1
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -56,7 +72,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 2
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

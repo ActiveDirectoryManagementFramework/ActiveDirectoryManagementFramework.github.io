@@ -22,6 +22,11 @@ Get-AdmfContext [-Name <String>] [-Store <String>] [-All] [<CommonParameters>]
 Get-AdmfContext [-Current] [<CommonParameters>]
 ```
 
+### Importing
+```
+Get-AdmfContext [-Importing] [<CommonParameters>]
+```
+
 ## DESCRIPTION
 Return available contexts.
 By default, only the latest version of any given context will be returned.
@@ -88,6 +93,23 @@ Displays the currently active contexts.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Current
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Importing
+Return the contexts that are currently being imported.
+Use this to react from within your context's scriptblocks to any other context that is selected.
+This parameter only has meaning when used within a context's scriptblocks.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Importing
 Aliases:
 
 Required: False

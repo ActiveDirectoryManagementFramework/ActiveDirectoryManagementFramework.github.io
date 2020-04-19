@@ -14,7 +14,8 @@ Brings a domain into compliance with the desired state.
 
 ```
 Invoke-AdmfDomain [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>]
- [[-Options] <UpdateDomainOptions[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-Options] <UpdateDomainOptions[]>] [[-CredentialProvider] <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -107,6 +108,22 @@ Accepted values: AccessRule, Acl, GPLink, GPPermission, GroupPolicy, GroupMember
 
 Required: False
 Position: 3
+Default value: Default
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CredentialProvider
+The credential provider to use to resolve the input credentials.
+See help on Register-AdmfCredentialProvider for details.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 4
 Default value: Default
 Accept pipeline input: False
 Accept wildcard characters: False

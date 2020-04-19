@@ -5,35 +5,34 @@ online version:
 schema: 2.0.0
 ---
 
-# Register-DMGroupPolicy
+# Unregister-DMGPRegistrySetting
 
 ## SYNOPSIS
-Adds a group policy object to the list of desired GPOs.
+Removes defined group policy registry settings.
 
 ## SYNTAX
 
 ```
-Register-DMGroupPolicy [-DisplayName] <String> [-Description] <String> [-ID] <String> [-Path] <String>
- [-ExportID] <String> [<CommonParameters>]
+Unregister-DMGPRegistrySetting [-PolicyName] <String> [-Key] <String> [-ValueName] <String>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Adds a group policy object to the list of desired GPOs.
-These are then tested for using Test-DMGroupPolicy and applied by using Invoke-DMGroupPolicy.
+Removes defined group policy registry settings.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-Get-Content gpos.json | ConvertFrom-Json | Write-Output | Register-DMGroupPolicy
+Get-DMGPRegistrySetting | Unregister-DMGPRegistrySetting
 ```
 
-Reads all gpos defined in gpos.json and registers each as a GPO object.
+Clears all defined group policy registry settings.
 
 ## PARAMETERS
 
-### -DisplayName
-Name of the GPO to add.
+### -PolicyName
+The name of the GPO the registry setting has been applied to.
 
 ```yaml
 Type: String
@@ -47,8 +46,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Description
-Description of the GPO in question,.
+### -Key
+The registry key affected.
 
 ```yaml
 Type: String
@@ -62,8 +61,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ID
-The GPO Id GUID.
+### -ValueName
+The name of the value this applies to.
 
 ```yaml
 Type: String
@@ -72,36 +71,6 @@ Aliases:
 
 Required: True
 Position: 3
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Path
-Path to where the GPO export can be found.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 4
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ExportID
-The tracking ID assigned to the GPO in order to detect its revision.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 5
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
