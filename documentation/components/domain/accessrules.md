@@ -65,7 +65,7 @@ $acl.Access |
         @{
             Name = 'Path'
             Expression = {
-                $acl.DistinguishedName -replace 'DC=contoso,DC=com','%DomainDN%'
+                $acl.DistinguishedName -replace 'DC=.+$','%DomainDN%'
             }
         },
         'ActiveDirectoryRights TO string',
@@ -124,7 +124,7 @@ The type of objects to affect.
 You can use the `Convert-DMSchemaGuid` to convert a GUID into a name or vice-versa:
 
 ```powershell
-Convert-DMSchemaGuid -Name 00000000-0000-0000-0000-000000000000 -OutType Name
+Convert-DMSchemaGuid -Name 00000000-0000-0000-0000-000000000000 -OutType Name -Server contoso.com
 ```
 
 > Note: This command is domain-specific and will on the first run cache all GUIDs, taking a considerable amount of time
