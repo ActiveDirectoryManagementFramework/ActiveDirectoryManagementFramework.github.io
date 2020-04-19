@@ -23,7 +23,13 @@ Sites cannot be deleted, so long as at least a single domain controller is assig
 
 ## Tools
 
-> TODO: Add Content
+Converts all current sites into configuration json:
+
+```powershell
+Get-ADReplicationSite -Properties Location |
+    Select-Object Name, Description, Location |
+        ConvertTo-Json
+```
 
 ## Sites and Domain Controller Site-Assignment
 
