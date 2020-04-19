@@ -17,6 +17,10 @@
             "Link":  "gplinks.html"
         },
         {
+            "Label":  "Group Policy Permissions",
+            "Link":  "gppermissions.html"
+        },
+        {
             "Label":  "Group-Memberships",
             "Link":  "groupmemberships.html"
         },
