@@ -13,6 +13,10 @@
             "Link":  "acls.html"
         },
         {
+            "Label":  "Domain Data",
+            "Link":  "domaindata.html"
+        },
+        {
             "Label":  "Group Policy Links",
             "Link":  "gplinks.html"
         },
