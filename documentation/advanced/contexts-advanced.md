@@ -17,6 +17,9 @@ The basic folder structure of a Context looks like this:
 │   ├───acls
 │   ├───builtinsids
 │   ├───gplinks
+│   ├───gppermissionfilters
+│   ├───gppermissions
+│   ├───gpregistrysettings
 │   ├───groupmemberships
 │   ├───grouppolicies
 │   ├───groups
@@ -27,6 +30,7 @@ The basic folder structure of a Context looks like this:
 │   ├───psos
 │   └───users
 └───forest
+    ├───ntAuthStore
     ├───schema
     ├───schemaldif
     ├───sitelinks
