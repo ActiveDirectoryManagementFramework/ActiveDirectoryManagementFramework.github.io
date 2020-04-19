@@ -20,15 +20,15 @@ Extend the group policy "SEC-T0-UserBaseline" by having it set ScreenSaveTimeOut
 }
 ```
 
-Extends the group policy "G-Server-CertDomain" by using the [Domain Data Component](domaindata.html) to retrieve some data (presumably the GUID of the targeted domain, given the name) and injecting it into the policy under the specified key and valuename:
+Extends the group policy "C-S-CA-EnrollmentPolicy" by using the [Domain Data Component](domaindata.html) to retrieve some data and injecting it into the policy under the specified key as the default value:
 
 ```json
 {
-    "PolicyName":  "G-Server-CertDomain",
-    "Key":  "HKLM\\System\\Some\\Other\\Path",
-    "ValueName":  "CertDomain",
-    "DomainData":  "DomainGuid",
-    "Type":  "String"
+    "PolicyName":  "C-S-CA-EnrollmentPolicy",
+    "Key":  "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Cryptography\\PolicyServers",
+    "ValueName":  "(Default)",
+    "Type":  "String",
+    "DomainData":  "PolicyID"
 }
 ```
 
