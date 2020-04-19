@@ -34,6 +34,7 @@ A few object types can be used for both however (Access Rules, Custom AD Objects
 Forest level settings are global settings found in the schema and configuration naming contexts.
 These apply to _all_ domains in a given forest.
 
++ [NTAuthStore](forest/ntauthstore.html)
 + [Schema (ldif)](forest/schema-ldif.html)
 + [Schema](forest/schema.html)
 + [Domain Controller Site-Assignment](forest/servers.html)

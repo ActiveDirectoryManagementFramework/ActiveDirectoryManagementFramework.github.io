@@ -5,6 +5,10 @@
     },
     "fellows":  [
         {
+            "Label":  "NTAuthStore",
+            "Link":  "ntauthstore.html"
+        },
+        {
             "Label":  "Schema (ldif)",
             "Link":  "schema-ldif.html"
         },
