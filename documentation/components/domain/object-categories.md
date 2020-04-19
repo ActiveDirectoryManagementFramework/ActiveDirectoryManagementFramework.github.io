@@ -2,20 +2,25 @@
 
 ## Description
 
-> Add Content
+Object categories are a way to apply settings to a type of object based on a ruleset / filterset.
+For example, by registering an object category "Domain Controllers" (with appropriate filters / conditions), it becomes possible to define access rules that apply to all domain controllers, but not all computers.
+
+> Object Categories are currently only implemented by AccessRules.
+
+To define an Object Category in a [Context](../../basics/contexts.html), create `.psd1` (*NOT* `.json`) files in the `domain/objectcategories` folder.
 
 ## Example Configuration
 
-> Add Content
-
-```json
-
-```
-
-## Tools
+An object category targeting Domain Controllers:
 
 ```powershell
-
+@{
+    Name = 'DomainController'
+    ObjectClass = 'computer'
+    Property = @('PrimaryGroupID')
+    TestScript = { $args[0].PrimaryGroupID -eq 516 }
+    LDAPFilter = '(&(objectCategory=computer)(primaryGroupID=516))'
+}
 ```
 
 ## Properties
@@ -34,17 +39,23 @@ Each object category can only apply to one class of object, in order to protect 
 ### Property
 
 The properties needed for this category.
-This attribute is used to optimize object reetrieval in case of multiple categories applying to the same class of object.
+This attribute is used to optimize object retrieval in case of multiple categories applying to the same class of object.
 
 ### TestScript
 
 Scriptblock used to determine, whether the input object is part of the category.
 Receives the AD object with the requested attributes as input object / argument.
 
+> Use `$args[0]` to refer to the input AD object to be tested.
+
 ### Filter
+
+> ParameterSet: Filter
 
 A filter used to find all objects in AD that match this category.
 
 ### LdapFilter
+
+> ParameterSet: LdapFilter
 
 An LDAP filter used to find all objects in AD that match this category.
