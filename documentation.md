@@ -15,6 +15,7 @@
 + [Callbacks](documentation/advanced/callbacks.html)
 + [Context Stores](documentation/advanced/context-stores.html)
 + [Contexts (Advanced)](documentation/advanced/contexts-advanced.html)
++ [Credential Providers](documentation/advanced/credentialprovider.html)
 + [Name Mapping](documentation/advanced/name-mapping.html)
 + [Processing Order](documentation/advanced/processing-order.html)
 + [Protocols](documentation/advanced/protocols.html)
