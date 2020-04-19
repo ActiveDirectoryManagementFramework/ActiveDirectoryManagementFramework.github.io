@@ -23,6 +23,21 @@ A reasonably simple configuration entry:
 
 This rule will verify and if neccesarry set Administrators as owner and disable Inheritance of the custom Tiering organizational unit.
 
+## Tools
+
+```powershell
+Get-ADobject -SearchBase 'OU=Contoso,DC=contoso,DC=com' -Filter * |
+    Get-ADSAcl |
+        ForEach-Object {
+            [PSCustomObject]@{
+                Owner = $_.Owner -as [String] -replace '^.+\\','%DomainName%\'
+                path = $_.DistinguishedName -replace 'DC=.+$','%DomainDN%'
+            }
+        } | ConvertTo-Json
+```
+
+This will return the ACL definitions of every object under a specific
+
 ## Properties
 
 ### Path
