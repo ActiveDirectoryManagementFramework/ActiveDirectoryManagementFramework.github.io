@@ -21,6 +21,10 @@
             "Link":  "gppermissions.html"
         },
         {
+            "Label":  "Group Policy Permission Filters",
+            "Link":  "gppermissionfilters.html"
+        },
+        {
             "Label":  "Group-Memberships",
             "Link":  "groupmemberships.html"
         },
