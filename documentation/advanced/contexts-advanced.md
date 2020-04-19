@@ -48,6 +48,9 @@ Each [Component](../components/components.html) folder can contain zero, one or 
 Any configuration file with an erroneous setting will fail the Context load.
 This immediately interrupts Context processing, clears all configuration already loaded and terminates with an error reporting just which file caused the issue.
 
+> Note: At the moment, only when running `Set-AdmfContext` directly will it show the broken file as a userfriendly warning.
+> Issue tracked [in Github](https://github.com/ActiveDirectoryManagementFramework/ADMF/issues/15)
+
 ## Domain Content Mode
 
 Directly within the `domain` Category-folder you can create a configuration file defining the [Content Mode](../basics/contentmode.html).
