@@ -43,7 +43,7 @@ Get-ADObject -Filter 'Name -eq "manager"' -SearchBase $schemaNC -Properties * |
       'OMSyntax'
       'AttributeSyntax'
       'isSingleValued as SingleValued'
-      'Admindescription'
+      'AdminDescription'
       'SearchFlags'
       'isMemberOfpartialAttributeSet as PartialAttributeSet'
       'showInAdvancedViewOnly as AdvancedView'
