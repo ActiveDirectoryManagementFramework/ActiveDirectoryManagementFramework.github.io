@@ -77,6 +77,11 @@ Should be unique and - to reduce risk for confusion - be equal to the [LdapDispl
 The [LdapDisplayName](https://docs.microsoft.com/windows/desktop/ADSchema/a-ldapdisplayname) must be unique and will be the name you programmatically access the attribute.
 For example, if you create an attribtue that is assigned to user objects and then want to search for users that have a specific value for that attribute using PowerShell, this is the name you use for filtering.
 
+### Name
+
+The [Name](https://docs.microsoft.com/en-us/windows/win32/adschema/a-cn) must be unique and is part of the AD path notation.
+This parameter is optional and will default to the same value as the AdminDisplayName.
+
 ### OMSyntax
 
 One part of the syntax notation (together with [AttributeSyntax](https://docs.microsoft.com/windows/desktop/ADSchema/a-attributesyntax)).
@@ -133,3 +138,15 @@ Boolean value, determines [whether this attribute is on the global catalog](http
 
 Whether the defined attribute is visible in advanced view of the ADUC mmc console only.
 Given that custom attributes will usually only show up in the attribute editor (available in advanced view only), this setting rarely has any effect.
+
+### IsDefunct
+
+Flags the attribute as defunctional.
+Use this to either retire an attribute or replace it with a new iteration.
+Setting this to `true` will cause:
+
++ The attribute to be flagged as isDefunct, removing it from attribute editors and limiting what can be done with it in the commandline
++ The attribute to be removed from all classes it was assigned to
++ Further changes to assigned classes to be ignored
+
+Other properties can and will still be applied, for example renaming the attribute if you want to replace it with a new attribute of the same name.

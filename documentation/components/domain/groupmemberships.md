@@ -100,3 +100,14 @@ The group to define members for.
 Whether the specified group should be empty.
 By default, groups are only considered when at least one member has been defined.
 Flagging a group for being empty will clear all members from it.
+
+### Mode
+
+Optional: yes | Default: Default
+
+How group memberships will be processed:
+
+| Default | Member must exist and be member of the group. |
+| MayBeMember | Principal must exist but may be a member. No add action will be generated if not a member, but also no remove action if it already is a member. |
+| MemberIfExists | If Principal exists, make it a member. |
+| MayBeMemberIfExists | Both existence and membership are optional for this principal. |
