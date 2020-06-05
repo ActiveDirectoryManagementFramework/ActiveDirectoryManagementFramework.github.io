@@ -14,13 +14,14 @@ Registers a group membership assignment as desired state.
 
 ### Entry (Default)
 ```
-Register-DMGroupMembership -Name <String> -Domain <String> -ItemType <String> -Group <String>
- [<CommonParameters>]
+Register-DMGroupMembership -Name <String> -Domain <String> -ItemType <String> -Group <String> [-Mode <String>]
+ [-ContextName <String>] [<CommonParameters>]
 ```
 
 ### Empty
 ```
-Register-DMGroupMembership -Group <String> -Empty <Boolean> [<CommonParameters>]
+Register-DMGroupMembership -Group <String> -Empty <Boolean> [-Mode <String>] [-ContextName <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -113,6 +114,43 @@ Required: True
 Position: Named
 Default value: False
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Mode
+How group memberships will be processed:
+- Default:             Member must exist and be member of the group.
+- MayBeMember:         Principal must exist but may be a member.
+No add action will be generated if not a member, but also no remove action if it already is a member.
+- MemberIfExists:      If Principal exists, make it a member.
+- MayBeMemberIfExists: Both existence and membership are optional for this principal.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Default
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContextName
+The name of the context defining the setting.
+This allows determining the configuration set that provided this setting.
+Used by the ADMF, available to any other configuration management solution.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: <Undefined>
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

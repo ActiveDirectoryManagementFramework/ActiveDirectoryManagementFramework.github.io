@@ -38,7 +38,7 @@ Both scriptblocks receive a single input object, with two properties:
 
 ### EXAMPLE 1
 ```
-Register-AdmfCredentialProvider -Name AZKeyVault -ScriptBlock $keyVaultScript
+Register-AdmfCredentialProvider -Name AZKeyVault -PreScript $keyVaultScript
 ```
 
 Registers the scriptblock defined in $keyVaultScript as "AZKeyVault" provider.

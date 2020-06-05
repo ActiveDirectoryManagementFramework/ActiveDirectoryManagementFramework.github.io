@@ -13,8 +13,9 @@ Registers an active directory group.
 ## SYNTAX
 
 ```
-Register-DMGroup [-Name] <String> [-Path] <String> [-Description] <String> [-Scope] <String>
- [[-Category] <String>] [[-OldNames] <String[]>] [[-Present] <Boolean>] [<CommonParameters>]
+Register-DMGroup [-Name] <String> [[-SamAccountName] <String>] [-Path] <String> [-Description] <String>
+ [-Scope] <String> [[-Category] <String>] [[-OldNames] <String[]>] [[-Present] <Boolean>]
+ [[-ContextName] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,6 +49,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -SamAccountName
+The SamAccountName of the group.
+Defaults to the Name if not otherwise specified.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Path
 Path (distinguishedName) of the OU to place the group in.
 Subject to string insertion.
@@ -58,7 +75,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 2
+Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -74,7 +91,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 3
+Position: 4
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -90,7 +107,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 4
+Position: 5
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -106,7 +123,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 5
+Position: 6
 Default value: Security
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -123,7 +140,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 6
+Position: 7
 Default value: @()
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -140,9 +157,26 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 7
+Position: 8
 Default value: True
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ContextName
+The name of the context defining the setting.
+This allows determining the configuration set that provided this setting.
+Used by the ADMF, available to any other configuration management solution.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 9
+Default value: <Undefined>
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

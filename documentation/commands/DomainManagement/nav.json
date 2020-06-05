@@ -233,6 +233,10 @@
                         "Link":  "Convert-DMSchemaGuid.html"
                     },
                     {
+                        "Label":  "Get-DMAccessRuleMode",
+                        "Link":  "Get-DMAccessRuleMode.html"
+                    },
+                    {
                         "Label":  "Get-DMCallback",
                         "Link":  "Get-DMCallback.html"
                     },
@@ -273,6 +277,10 @@
                         "Link":  "Invoke-DMDomainData.html"
                     },
                     {
+                        "Label":  "Register-DMAccessRuleMode",
+                        "Link":  "Register-DMAccessRuleMode.html"
+                    },
+                    {
                         "Label":  "Register-DMBuiltInSID",
                         "Link":  "Register-DMBuiltInSID.html"
                     },
@@ -301,6 +309,10 @@
                         "Link":  "Register-DMObjectCategory.html"
                     },
                     {
+                        "Label":  "Resolve-DMAccessRuleMode",
+                        "Link":  "Resolve-DMAccessRuleMode.html"
+                    },
+                    {
                         "Label":  "Resolve-DMObjectCategory",
                         "Link":  "Resolve-DMObjectCategory.html"
                     },
@@ -323,6 +335,10 @@
                     {
                         "Label":  "Test-DMGPRegistrySetting",
                         "Link":  "Test-DMGPRegistrySetting.html"
+                    },
+                    {
+                        "Label":  "Unregister-DMAccessRuleMode",
+                        "Link":  "Unregister-DMAccessRuleMode.html"
                     },
                     {
                         "Label":  "Unregister-DMCallback",

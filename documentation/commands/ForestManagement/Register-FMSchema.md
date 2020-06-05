@@ -14,9 +14,9 @@ Registers a schema extension attribute.
 
 ```
 Register-FMSchema [-ObjectClass] <String[]> [-OID] <String> [-AdminDisplayName] <String>
- [-LdapDisplayName] <String> [-OMSyntax] <Int32> [-AttributeSyntax] <String> [-SingleValued]
+ [-LdapDisplayName] <String> [[-Name] <String>] [-OMSyntax] <Int32> [-AttributeSyntax] <String> [-SingleValued]
  [-AdminDescription] <String> [-SearchFlags] <Int32> [-PartialAttributeSet] <Boolean> [-AdvancedView] <Boolean>
- [<CommonParameters>]
+ [[-IsDefunct] <Boolean>] [[-ContextName] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -95,6 +95,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Name
+The name of the attribute.
+Defaults to the AdminDisplayName if not specified.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 5
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -OMSyntax
 The OM Syntax of the attribute
 
@@ -104,7 +120,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 5
+Position: 6
 Default value: 0
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -119,7 +135,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 6
+Position: 7
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -149,7 +165,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 7
+Position: 8
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -164,7 +180,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 8
+Position: 9
 Default value: 0
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -179,7 +195,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 9
+Position: 10
 Default value: False
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -195,9 +211,42 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 10
+Position: 11
 Default value: False
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IsDefunct
+Flag this attribute as defunct.
+It will be marked as such in AD, be delisted from the Global Catalog and removed from all its supposed memberships.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 12
+Default value: False
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ContextName
+The name of the context defining the setting.
+This allows determining the configuration set that provided this setting.
+Used by the ADMF, available to any other configuration management solution.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 13
+Default value: <Undefined>
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
