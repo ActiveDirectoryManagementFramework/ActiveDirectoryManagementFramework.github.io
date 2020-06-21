@@ -3,5 +3,14 @@
         "Label":  "Components",
         "Link":  "../components.html"
     },
-    "fellows":  [ ]
+    "fellows":  [ 
+        {
+            "Label":  "Core deployment settings",
+            "Link":  "core.html"
+        },
+        {
+            "Label":  "Network Shares",
+            "Link":  "shares.html"
+        }
+    ]
 }
