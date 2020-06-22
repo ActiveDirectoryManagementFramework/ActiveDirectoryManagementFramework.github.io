@@ -5,6 +5,14 @@
                },
     "fellows":  [
                     {
+                        "Label":  "Clear-DCConfiguration",
+                        "Link":  "Clear-DCConfiguration.html"
+                    },
+                    {
+                        "Label":  "Get-DCShare",
+                        "Link":  "Get-DCShare.html"
+                    },
+                    {
                         "Label":  "Install-DCChildDomain",
                         "Link":  "Install-DCChildDomain.html"
                     },
@@ -15,6 +23,26 @@
                     {
                         "Label":  "Install-DCRootDomain",
                         "Link":  "Install-DCRootDomain.html"
+                    },
+                    {
+                        "Label":  "Invoke-DCShare",
+                        "Link":  "Invoke-DCShare.html"
+                    },
+                    {
+                        "Label":  "Register-DCShare",
+                        "Link":  "Register-DCShare.html"
+                    },
+                    {
+                        "Label":  "Set-DCDomainContext",
+                        "Link":  "Set-DCDomainContext.html"
+                    },
+                    {
+                        "Label":  "Test-DCShare",
+                        "Link":  "Test-DCShare.html"
+                    },
+                    {
+                        "Label":  "Unregister-DCShare",
+                        "Link":  "Unregister-DCShare.html"
                     }
                 ]
 }
