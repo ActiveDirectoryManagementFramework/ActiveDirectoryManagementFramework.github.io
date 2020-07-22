@@ -25,7 +25,7 @@ Default definition for the Domain Controllers OU:
 
 ## Tools
 
-Convert all GPOs into Json configuration:
+Convert all Organizational Units into Json configuration:
 
 ```powershell
 Get-ADOrganizationalUnit -Filter * -Properties Description |
