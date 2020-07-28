@@ -111,3 +111,15 @@ How group memberships will be processed:
 | MayBeMember | Principal must exist but may be a member. No add action will be generated if not a member, but also no remove action if it already is a member. |
 | MemberIfExists | If Principal exists, make it a member. |
 | MayBeMemberIfExists | Both existence and membership are optional for this principal. |
+
+### GroupProcessingMode
+
+Optional: yes | Default: Constrained
+
+Governs how _all_ group memberships on the targeted group will be processed.
+Supported modes:
+
+| Constrained | Existing Group Memberships not defined will be removed |
+| Additive | Group Memberships defined will be applied, but non-configured memberships will be ignored. |
+
+If no setting is defined, it will default to 'Constrained'
