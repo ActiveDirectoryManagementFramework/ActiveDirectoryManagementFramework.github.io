@@ -11,6 +11,7 @@ Settings that govern how domain controllers should be deployed and configured.
 For advanced OS configuration consider moving to DSC instead.
 
 + [Core deployment settings](dc/core.html)
++ [File System Access Rules](fsaccessrules.html)
 + [Network Shares](dc/shares.html)
 
 ## Domain
