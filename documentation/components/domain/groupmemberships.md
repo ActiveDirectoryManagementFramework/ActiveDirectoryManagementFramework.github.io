@@ -15,7 +15,9 @@ The membership will only take effect after the trust is established, but require
 
 ## Example Configuration
 
-This example configuration shows the default configuration for the `Administrators` group in a newly installed domain:
+This example configuration shows the default configuration for the `Administrators` group in a newly installed domain.
+It also shows SID based name resolution, as organizations may rename the account and active directory environments might have localization-specific names.
+(Theoretically, Domain Admins and Enterprise Admins could have both also been defined by SID)
 
 ```json
 [
@@ -32,7 +34,7 @@ This example configuration shows the default configuration for the `Administrato
         "Group":  "Administrators"
     },
     {
-        "Name":  "Administrator",
+        "Name":  "%DomainSID%-512",
         "Domain":  "%DomainName%",
         "ItemType":  "user",
         "Group":  "Administrators"
@@ -77,6 +79,9 @@ This will generate a json file for all group memberships in all groups in the do
 > This parameter uses [name resolution](../../advanced/name-mapping.html).
 
 The name of the user or group to grant membership in the target group.
+This parameter also accepts SIDs instead of names.
+
+> %DomainSID% is the placeholder for the domain SID, %RootDomainSID% the one for the forest root domain.
 
 ### Domain
 
@@ -111,3 +116,15 @@ How group memberships will be processed:
 | MayBeMember | Principal must exist but may be a member. No add action will be generated if not a member, but also no remove action if it already is a member. |
 | MemberIfExists | If Principal exists, make it a member. |
 | MayBeMemberIfExists | Both existence and membership are optional for this principal. |
+
+### GroupProcessingMode
+
+Optional: yes | Default: Constrained
+
+Governs how _all_ group memberships on the targeted group will be processed.
+Supported modes:
+
+| Constrained | Existing Group Memberships not defined will be removed |
+| Additive | Group Memberships defined will be applied, but non-configured memberships will be ignored. |
+
+If no setting is defined, it will default to 'Constrained'
