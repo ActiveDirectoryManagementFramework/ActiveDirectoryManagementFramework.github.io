@@ -15,7 +15,7 @@ Adds a new domain controller to an existing domain.
 ```
 Install-DCDomainController [[-ComputerName] <ComputerParameter>] [[-Credential] <PSCredential>]
  [-DomainName] <String> [[-DomainCredential] <PSCredential>] [[-SafeModeAdministratorPassword] <SecureString>]
- [-NoDNS] [-NoReboot] [[-LogPath] <String>] [[-Sysvolpath] <String>] [[-DatabasePath] <String>]
+ [-NoDNS] [-NoReboot] [[-LogPath] <String>] [[-SysvolPath] <String>] [[-DatabasePath] <String>]
  [-NoResultCache] [-EnableException] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -121,7 +121,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (Get-PSFConfigValue -FullName 'DCManagement.Defaults.NoDNS')
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -136,7 +136,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (Get-PSFConfigValue -FullName 'DCManagement.Defaults.NoReboot')
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -151,12 +151,12 @@ Aliases:
 
 Required: False
 Position: 6
-Default value: (Get-PSFConfigValue -FullName 'DCManagement.Defaults.LogPath')
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Sysvolpath
+### -SysvolPath
 The path where the DC will store sysvol.
 
 ```yaml
@@ -166,7 +166,7 @@ Aliases:
 
 Required: False
 Position: 7
-Default value: (Get-PSFConfigValue -FullName 'DCManagement.Defaults.SysvolPath')
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -181,7 +181,7 @@ Aliases:
 
 Required: False
 Position: 8
-Default value: (Get-PSFConfigValue -FullName 'DCManagement.Defaults.DatabasePath')
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

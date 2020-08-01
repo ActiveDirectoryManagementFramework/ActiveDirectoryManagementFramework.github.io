@@ -9,6 +9,10 @@
                         "Link":  "Clear-DCConfiguration.html"
                     },
                     {
+                        "Label":  "Get-DCAccessRule",
+                        "Link":  "Get-DCAccessRule.html"
+                    },
+                    {
                         "Label":  "Get-DCShare",
                         "Link":  "Get-DCShare.html"
                     },
@@ -25,8 +29,16 @@
                         "Link":  "Install-DCRootDomain.html"
                     },
                     {
+                        "Label":  "Invoke-DCAccessRule",
+                        "Link":  "Invoke-DCAccessRule.html"
+                    },
+                    {
                         "Label":  "Invoke-DCShare",
                         "Link":  "Invoke-DCShare.html"
+                    },
+                    {
+                        "Label":  "Register-DCAccessRule",
+                        "Link":  "Register-DCAccessRule.html"
                     },
                     {
                         "Label":  "Register-DCShare",
@@ -37,8 +49,16 @@
                         "Link":  "Set-DCDomainContext.html"
                     },
                     {
+                        "Label":  "Test-DCAccessRule",
+                        "Link":  "Test-DCAccessRule.html"
+                    },
+                    {
                         "Label":  "Test-DCShare",
                         "Link":  "Test-DCShare.html"
+                    },
+                    {
+                        "Label":  "Unregister-DCAccessRule",
+                        "Link":  "Unregister-DCAccessRule.html"
                     },
                     {
                         "Label":  "Unregister-DCShare",

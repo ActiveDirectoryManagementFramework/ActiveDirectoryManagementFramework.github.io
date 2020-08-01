@@ -16,7 +16,7 @@ Installs a child domain.
 Install-DCChildDomain [[-ComputerName] <ComputerParameter>] [[-Credential] <PSCredential>]
  [-DomainName] <String> [-ParentDomainName] <String> [[-NetBiosName] <String>]
  [[-SafeModeAdministratorPassword] <SecureString>] [[-EnterpriseAdminCredential] <PSCredential>] [-NoDNS]
- [-NoReboot] [[-LogPath] <String>] [[-Sysvolpath] <String>] [[-DatabasePath] <String>] [-NoResultCache]
+ [-NoReboot] [[-LogPath] <String>] [[-SysvolPath] <String>] [[-DatabasePath] <String>] [-NoResultCache]
  [-EnableException] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -155,7 +155,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (Get-PSFConfigValue -FullName 'DCManagement.Defaults.NoDNS')
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -171,7 +171,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: (Get-PSFConfigValue -FullName 'DCManagement.Defaults.NoReboot')
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -186,12 +186,12 @@ Aliases:
 
 Required: False
 Position: 8
-Default value: (Get-PSFConfigValue -FullName 'DCManagement.Defaults.LogPath')
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Sysvolpath
+### -SysvolPath
 The path where SYSVOL should be stored.
 
 ```yaml
@@ -201,7 +201,7 @@ Aliases:
 
 Required: False
 Position: 9
-Default value: (Get-PSFConfigValue -FullName 'DCManagement.Defaults.SysvolPath')
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -216,7 +216,7 @@ Aliases:
 
 Required: False
 Position: 10
-Default value: (Get-PSFConfigValue -FullName 'DCManagement.Defaults.DatabasePath')
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

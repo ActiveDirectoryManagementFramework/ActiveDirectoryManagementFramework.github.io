@@ -309,6 +309,10 @@
                         "Link":  "Register-DMObjectCategory.html"
                     },
                     {
+                        "Label":  "Reset-DMDomainCredential",
+                        "Link":  "Reset-DMDomainCredential.html"
+                    },
+                    {
                         "Label":  "Resolve-DMAccessRuleMode",
                         "Link":  "Resolve-DMAccessRuleMode.html"
                     },

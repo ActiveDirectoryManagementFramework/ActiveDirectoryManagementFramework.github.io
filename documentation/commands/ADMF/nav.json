@@ -17,6 +17,10 @@
                         "Link":  "Get-AdmfContextStore.html"
                     },
                     {
+                        "Label":  "Invoke-AdmfDC",
+                        "Link":  "Invoke-AdmfDC.html"
+                    },
+                    {
                         "Label":  "Invoke-AdmfDomain",
                         "Link":  "Invoke-AdmfDomain.html"
                     },
@@ -39,6 +43,10 @@
                     {
                         "Label":  "Set-AdmfContext",
                         "Link":  "Set-AdmfContext.html"
+                    },
+                    {
+                        "Label":  "Test-AdmfDC",
+                        "Link":  "Test-AdmfDC.html"
                     },
                     {
                         "Label":  "Test-AdmfDomain",

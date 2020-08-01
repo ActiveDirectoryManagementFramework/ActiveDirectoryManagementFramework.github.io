@@ -15,12 +15,12 @@ Applies a set of configuration contexts.
 ### name (Default)
 ```
 Set-AdmfContext -Context <Object[]> [-ReUse] [-Server <ComputerParameter>] [-Credential <PSCredential>]
- [-EnableException] [<CommonParameters>]
+ [-NoDomain] [-EnableException] [<CommonParameters>]
 ```
 
 ### interactive
 ```
-Set-AdmfContext [-Interactive] [-ReUse] [-Server <ComputerParameter>] [-Credential <PSCredential>]
+Set-AdmfContext [-Interactive] [-ReUse] [-Server <ComputerParameter>] [-Credential <PSCredential>] [-NoDomain]
  [-EnableException] [<CommonParameters>]
 ```
 
@@ -128,6 +128,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoDomain
+If used against a target without a domain, it will skip AD connect and instead use the server name for Context caching purposes.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

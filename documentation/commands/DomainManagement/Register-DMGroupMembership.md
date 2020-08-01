@@ -15,13 +15,13 @@ Registers a group membership assignment as desired state.
 ### Entry (Default)
 ```
 Register-DMGroupMembership -Name <String> -Domain <String> -ItemType <String> -Group <String> [-Mode <String>]
- [-ContextName <String>] [<CommonParameters>]
+ [-GroupProcessingMode <String>] [-ContextName <String>] [<CommonParameters>]
 ```
 
 ### Empty
 ```
-Register-DMGroupMembership -Group <String> -Empty <Boolean> [-Mode <String>] [-ContextName <String>]
- [<CommonParameters>]
+Register-DMGroupMembership -Group <String> -Empty <Boolean> [-Mode <String>] [-GroupProcessingMode <String>]
+ [-ContextName <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,6 +42,8 @@ Imports all defined groupmemberships from the targeted json configuration file.
 
 ### -Name
 The name of the user or group to grant membership in the target group.
+This parameter also accepts SIDs instead of names.
+Note: %DomainSID% is the placeholder for the domain SID, %RootDomainSID% the one for the forest root domain.
 
 ```yaml
 Type: String
@@ -118,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mode
-How group memberships will be processed:
+How the defined group membership will be processed:
 - Default:             Member must exist and be member of the group.
 - MayBeMember:         Principal must exist but may be a member.
 No add action will be generated if not a member, but also no remove action if it already is a member.
@@ -133,7 +135,26 @@ Aliases:
 Required: False
 Position: Named
 Default value: Default
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -GroupProcessingMode
+Governs how ALL group memberships on the targeted group will be processed.
+Supported modes:
+- Constrained: Existing Group Memberships not defined will be removed
+- Additive: Group Memberships defined will be applied, but non-configured memberships will be ignored.
+If no setting is defined, it will default to 'Constrained'
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

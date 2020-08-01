@@ -112,6 +112,7 @@
  - [Register-DMGPRegistrySetting](DomainManagement/Register-DMGPRegistrySetting.html)
  - [Register-DMNameMapping](DomainManagement/Register-DMNameMapping.html)
  - [Register-DMObjectCategory](DomainManagement/Register-DMObjectCategory.html)
+ - [Reset-DMDomainCredential](DomainManagement/Reset-DMDomainCredential.html)
  - [Resolve-DMAccessRuleMode](DomainManagement/Resolve-DMAccessRuleMode.html)
  - [Resolve-DMObjectCategory](DomainManagement/Resolve-DMObjectCategory.html)
  - [Set-DMContentMode](DomainManagement/Set-DMContentMode.html)

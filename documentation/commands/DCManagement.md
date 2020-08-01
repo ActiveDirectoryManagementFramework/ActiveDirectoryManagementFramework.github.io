@@ -1,12 +1,17 @@
 # DCManagement Command Reference
 
  - [Clear-DCConfiguration](DCManagement/Clear-DCConfiguration.html)
+ - [Get-DCAccessRule](DCManagement/Get-DCAccessRule.html)
  - [Get-DCShare](DCManagement/Get-DCShare.html)
  - [Install-DCChildDomain](DCManagement/Install-DCChildDomain.html)
  - [Install-DCDomainController](DCManagement/Install-DCDomainController.html)
  - [Install-DCRootDomain](DCManagement/Install-DCRootDomain.html)
+ - [Invoke-DCAccessRule](DCManagement/Invoke-DCAccessRule.html)
  - [Invoke-DCShare](DCManagement/Invoke-DCShare.html)
+ - [Register-DCAccessRule](DCManagement/Register-DCAccessRule.html)
  - [Register-DCShare](DCManagement/Register-DCShare.html)
  - [Set-DCDomainContext](DCManagement/Set-DCDomainContext.html)
+ - [Test-DCAccessRule](DCManagement/Test-DCAccessRule.html)
  - [Test-DCShare](DCManagement/Test-DCShare.html)
+ - [Unregister-DCAccessRule](DCManagement/Unregister-DCAccessRule.html)
  - [Unregister-DCShare](DCManagement/Unregister-DCShare.html)

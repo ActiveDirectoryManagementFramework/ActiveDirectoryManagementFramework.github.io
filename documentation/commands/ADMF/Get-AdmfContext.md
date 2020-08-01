@@ -27,6 +27,11 @@ Get-AdmfContext [-Current] [<CommonParameters>]
 Get-AdmfContext [-Importing] [<CommonParameters>]
 ```
 
+### Server
+```
+Get-AdmfContext [-DomainTable] [<CommonParameters>]
+```
+
 ## DESCRIPTION
 Return available contexts.
 By default, only the latest version of any given context will be returned.
@@ -110,6 +115,21 @@ This parameter only has meaning when used within a context's scriptblocks.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Importing
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainTable
+Return a list of which target domain has which contexts assigned in cache.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Server
 Aliases:
 
 Required: False
