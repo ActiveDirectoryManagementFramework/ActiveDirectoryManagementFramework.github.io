@@ -19,7 +19,15 @@
         {
             "Label":  "Schema Attribute",
             "Link":  "schema.html"
-        },
+		},
+		{
+			"Label":  "Schema Default Permissions",
+			"Link":  "schemadefaultpermissions.html"
+		},
+		{
+			"Label":  "Exchange Schema",
+			"Link":  "exchangeschema.html"
+		},
         {
             "Label":  "Domain Controller Site-Assignment",
             "Link":  "servers.html"

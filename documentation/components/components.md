@@ -46,6 +46,8 @@ These apply to _all_ domains in a given forest.
 + [NTAuthStore](forest/ntauthstore.html)
 + [Schema (ldif)](forest/schema-ldif.html)
 + [Schema](forest/schema.html)
++ [Schema Default Permissions](forest/schemadefaultpermissions.html)
++ [Exchange Schema](forest/exchangeschema.html)
 + [Domain Controller Site-Assignment](forest/servers.html)
 + [Sitelinks](forest/sitelinks.html)
 + [Sites](forest/sites.html)
