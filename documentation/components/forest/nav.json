@@ -4,6 +4,10 @@
         "Link":  "../components.html"
     },
     "fellows":  [
+		{
+			"Label":  "Forest Level",
+            "Link":  "forestlevel.html"
+		},
         {
             "Label":  "NTAuthStore",
             "Link":  "ntauthstore.html"
@@ -15,7 +19,15 @@
         {
             "Label":  "Schema Attribute",
             "Link":  "schema.html"
-        },
+		},
+		{
+			"Label":  "Schema Default Permissions",
+			"Link":  "schemadefaultpermissions.html"
+		},
+		{
+			"Label":  "Exchange Schema",
+			"Link":  "exchangeschema.html"
+		},
         {
             "Label":  "Domain Controller Site-Assignment",
             "Link":  "servers.html"

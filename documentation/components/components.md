@@ -23,6 +23,7 @@ A few object types can be used for both however (Access Rules, Custom AD Objects
 + [AccessRules](domain/accessrules.html)
 + [Acls](domain/acls.html)
 + [Domain Data](domain/domaindata.html)
++ [Domain Level](domain/domainlevel.html)
 + [Group Policy Links](domain/gplinks.html)
 + [Group Policy Permissions](domain/gppermissions.html)
 + [Group Policy Permission Filters](domain/gppermissionfilters.html)
@@ -41,9 +42,12 @@ A few object types can be used for both however (Access Rules, Custom AD Objects
 Forest level settings are global settings found in the schema and configuration naming contexts.
 These apply to _all_ domains in a given forest.
 
++ [Forest Level](forest/forestlevel.html)
 + [NTAuthStore](forest/ntauthstore.html)
 + [Schema (ldif)](forest/schema-ldif.html)
 + [Schema](forest/schema.html)
++ [Schema Default Permissions](forest/schemadefaultpermissions.html)
++ [Exchange Schema](forest/exchangeschema.html)
 + [Domain Controller Site-Assignment](forest/servers.html)
 + [Sitelinks](forest/sitelinks.html)
 + [Sites](forest/sites.html)
