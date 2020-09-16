@@ -1,6 +1,22 @@
 # ForestManagement Command Reference
 
 
+## ExchangeSchema
+
+ - [Get-FMExchangeSchema](ForestManagement/Get-FMExchangeSchema.html)
+ - [Invoke-FMExchangeSchema](ForestManagement/Invoke-FMExchangeSchema.html)
+ - [Register-FMExchangeSchema](ForestManagement/Register-FMExchangeSchema.html)
+ - [Test-FMExchangeSchema](ForestManagement/Test-FMExchangeSchema.html)
+ - [Unregister-FMExchangeSchema](ForestManagement/Unregister-FMExchangeSchema.html)
+
+## ForestLevel
+
+ - [Get-FMForestLevel](ForestManagement/Get-FMForestLevel.html)
+ - [Invoke-FMForestLevel](ForestManagement/Invoke-FMForestLevel.html)
+ - [Register-FMForestLevel](ForestManagement/Register-FMForestLevel.html)
+ - [Test-FMForestLevel](ForestManagement/Test-FMForestLevel.html)
+ - [Unregister-FMForestLevel](ForestManagement/Unregister-FMForestLevel.html)
+
 ## NTAuthStore
 
  - [Get-FMNTAuthStore](ForestManagement/Get-FMNTAuthStore.html)
@@ -16,6 +32,14 @@
  - [Register-FMSchema](ForestManagement/Register-FMSchema.html)
  - [Test-FMSchema](ForestManagement/Test-FMSchema.html)
  - [Unregister-FMSchema](ForestManagement/Unregister-FMSchema.html)
+
+## SchemaDefaultPermission
+
+ - [Get-FMSchemaDefaultPermission](ForestManagement/Get-FMSchemaDefaultPermission.html)
+ - [Invoke-FMSchemaDefaultPermission](ForestManagement/Invoke-FMSchemaDefaultPermission.html)
+ - [Register-FMSchemaDefaultPermission](ForestManagement/Register-FMSchemaDefaultPermission.html)
+ - [Test-FMSchemaDefaultPermission](ForestManagement/Test-FMSchemaDefaultPermission.html)
+ - [Unregister-FMSchemaDefaultPermission](ForestManagement/Unregister-FMSchemaDefaultPermission.html)
 
 ## SchemaLdif
 

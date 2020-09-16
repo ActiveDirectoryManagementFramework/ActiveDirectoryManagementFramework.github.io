@@ -14,7 +14,7 @@ Brings a domain into compliance with the desired state.
 
 ```
 Invoke-AdmfDomain [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>]
- [[-Options] <UpdateDomainOptions[]>] [[-CredentialProvider] <String>] [-WhatIf] [-Confirm]
+ [[-Options] <UpdateDomainOptions[]>] [[-CredentialProvider] <String>] [-ContextPrompt] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -104,7 +104,7 @@ This exists in order to be able to create
 Type: UpdateDomainOptions[]
 Parameter Sets: (All)
 Aliases:
-Accepted values: AccessRule, Acl, GPLink, GPPermission, GroupPolicy, GroupMembership, Group, OUSoft, OUHard, PSO, Security, User, AllContent, GPLinkDisable, AllLinks, GroupPolicyDelete, AllGP, Object, Default, All
+Accepted values: AccessRule, Acl, GPLink, GPPermission, GroupPolicy, GroupMembership, Group, OUSoft, OUHard, PSO, Security, User, AllContent, GPLinkDisable, AllLinks, GroupPolicyDelete, AllGP, Object, Default, DomainLevel, All
 
 Required: False
 Position: 3
@@ -125,6 +125,21 @@ Aliases:
 Required: False
 Position: 4
 Default value: Default
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContextPrompt
+Force displaying the Context selection User Interface.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: Ctx
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

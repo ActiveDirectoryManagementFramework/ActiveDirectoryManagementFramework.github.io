@@ -14,7 +14,7 @@ Tests a domain for its domain level content and whether it matches the desired s
 
 ```
 Test-AdmfDomain [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>]
- [[-Options] <UpdateDomainOptions[]>] [[-CredentialProvider] <String>] [<CommonParameters>]
+ [[-Options] <UpdateDomainOptions[]>] [[-CredentialProvider] <String>] [-ContextPrompt] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -71,7 +71,7 @@ By default, all tests are run, but it is possibly to selectively choose which to
 Type: UpdateDomainOptions[]
 Parameter Sets: (All)
 Aliases:
-Accepted values: AccessRule, Acl, GPLink, GPPermission, GroupPolicy, GroupMembership, Group, OUSoft, OUHard, PSO, Security, User, AllContent, GPLinkDisable, AllLinks, GroupPolicyDelete, AllGP, Object, Default, All
+Accepted values: AccessRule, Acl, GPLink, GPPermission, GroupPolicy, GroupMembership, Group, OUSoft, OUHard, PSO, Security, User, AllContent, GPLinkDisable, AllLinks, GroupPolicyDelete, AllGP, Object, Default, DomainLevel, All
 
 Required: False
 Position: 3
@@ -92,6 +92,21 @@ Aliases:
 Required: False
 Position: 4
 Default value: Default
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContextPrompt
+Force displaying the Context selection User Interface.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: Ctx
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

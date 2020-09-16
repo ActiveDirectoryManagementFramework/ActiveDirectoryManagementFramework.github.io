@@ -45,6 +45,26 @@
                         "Link":  "Unregister-DMAcl.html"
                     },
                     {
+                        "Label":  "Get-DMDomainLevel",
+                        "Link":  "Get-DMDomainLevel.html"
+                    },
+                    {
+                        "Label":  "Invoke-DMDomainLevel",
+                        "Link":  "Invoke-DMDomainLevel.html"
+                    },
+                    {
+                        "Label":  "Register-DMDomainLevel",
+                        "Link":  "Register-DMDomainLevel.html"
+                    },
+                    {
+                        "Label":  "Test-DMDomainLevel",
+                        "Link":  "Test-DMDomainLevel.html"
+                    },
+                    {
+                        "Label":  "Unregister-DMDomainLevel",
+                        "Link":  "Unregister-DMDomainLevel.html"
+                    },
+                    {
                         "Label":  "Get-DMGPLink",
                         "Link":  "Get-DMGPLink.html"
                     },
