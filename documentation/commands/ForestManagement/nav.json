@@ -5,6 +5,46 @@
                },
     "fellows":  [
                     {
+                        "Label":  "Get-FMExchangeSchema",
+                        "Link":  "Get-FMExchangeSchema.html"
+                    },
+                    {
+                        "Label":  "Invoke-FMExchangeSchema",
+                        "Link":  "Invoke-FMExchangeSchema.html"
+                    },
+                    {
+                        "Label":  "Register-FMExchangeSchema",
+                        "Link":  "Register-FMExchangeSchema.html"
+                    },
+                    {
+                        "Label":  "Test-FMExchangeSchema",
+                        "Link":  "Test-FMExchangeSchema.html"
+                    },
+                    {
+                        "Label":  "Unregister-FMExchangeSchema",
+                        "Link":  "Unregister-FMExchangeSchema.html"
+                    },
+                    {
+                        "Label":  "Get-FMForestLevel",
+                        "Link":  "Get-FMForestLevel.html"
+                    },
+                    {
+                        "Label":  "Invoke-FMForestLevel",
+                        "Link":  "Invoke-FMForestLevel.html"
+                    },
+                    {
+                        "Label":  "Register-FMForestLevel",
+                        "Link":  "Register-FMForestLevel.html"
+                    },
+                    {
+                        "Label":  "Test-FMForestLevel",
+                        "Link":  "Test-FMForestLevel.html"
+                    },
+                    {
+                        "Label":  "Unregister-FMForestLevel",
+                        "Link":  "Unregister-FMForestLevel.html"
+                    },
+                    {
                         "Label":  "Get-FMNTAuthStore",
                         "Link":  "Get-FMNTAuthStore.html"
                     },
@@ -43,6 +83,26 @@
                     {
                         "Label":  "Unregister-FMSchema",
                         "Link":  "Unregister-FMSchema.html"
+                    },
+                    {
+                        "Label":  "Get-FMSchemaDefaultPermission",
+                        "Link":  "Get-FMSchemaDefaultPermission.html"
+                    },
+                    {
+                        "Label":  "Invoke-FMSchemaDefaultPermission",
+                        "Link":  "Invoke-FMSchemaDefaultPermission.html"
+                    },
+                    {
+                        "Label":  "Register-FMSchemaDefaultPermission",
+                        "Link":  "Register-FMSchemaDefaultPermission.html"
+                    },
+                    {
+                        "Label":  "Test-FMSchemaDefaultPermission",
+                        "Link":  "Test-FMSchemaDefaultPermission.html"
+                    },
+                    {
+                        "Label":  "Unregister-FMSchemaDefaultPermission",
+                        "Link":  "Unregister-FMSchemaDefaultPermission.html"
                     },
                     {
                         "Label":  "Get-FMSchemaLdif",

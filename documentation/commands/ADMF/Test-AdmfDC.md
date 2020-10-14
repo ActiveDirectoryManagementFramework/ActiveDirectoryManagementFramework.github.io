@@ -14,7 +14,7 @@ Tests whether all DCs in the target domain are in the desired state.
 
 ```
 Test-AdmfDC [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>] [[-Options] <UpdateDCOptions[]>]
- [[-CredentialProvider] <String>] [<CommonParameters>]
+ [[-CredentialProvider] <String>] [-ContextPrompt] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -90,6 +90,21 @@ Aliases:
 Required: False
 Position: 4
 Default value: Default
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContextPrompt
+Force displaying the Context selection User Interface.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: Ctx
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

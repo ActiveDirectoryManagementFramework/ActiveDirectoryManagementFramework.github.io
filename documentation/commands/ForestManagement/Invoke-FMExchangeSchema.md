@@ -1,33 +1,34 @@
 ---
-external help file: ADMF-help.xml
-Module Name: ADMF
+external help file: ForestManagement-help.xml
+Module Name: ForestManagement
 online version:
 schema: 2.0.0
 ---
 
-# Invoke-AdmfDC
+# Invoke-FMExchangeSchema
 
 ## SYNOPSIS
-Brings all DCs of the target domain into the desired/defined state.
+Applies the desired Exchange version to the tareted Forest.
 
 ## SYNTAX
 
 ```
-Invoke-AdmfDC [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>] [[-Options] <UpdateDCOptions[]>]
- [[-CredentialProvider] <String>] [-ContextPrompt] [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-FMExchangeSchema [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>] [-EnableException]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Brings all DCs of the target domain into the desired/defined state.
+Applies the desired Exchange version to the tareted Forest.
+Requires Schema Admin & Enterprise Admin privileges.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-Invoke-AdmfDC -Server corp.contoso.com
+Invoke-FMExchangeSchema -Server contoso.com
 ```
 
-Brings all DCs of the domain corp.contoso.com into the desired/defined state.
+Applies the desired Exchange version to the contoso.com Forest.
 
 ## PARAMETERS
 
@@ -61,46 +62,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Options
-Which aspects to actually update.
-By default, all Components are applied.
-
-```yaml
-Type: UpdateDCOptions[]
-Parameter Sets: (All)
-Aliases:
-Accepted values: Share, FSAccessRule, Default, All
-
-Required: False
-Position: 3
-Default value: Default
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CredentialProvider
-The credential provider to use to resolve the input credentials.
-See help on Register-AdmfCredentialProvider for details.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 4
-Default value: Default
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ContextPrompt
-Force displaying the Context selection User Interface.
+### -EnableException
+This parameters disables user-friendly warnings and enables the throwing of exceptions.
+This is less user friendly, but allows catching exceptions in calling scripts.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: Ctx
+Aliases:
 
 Required: False
 Position: Named

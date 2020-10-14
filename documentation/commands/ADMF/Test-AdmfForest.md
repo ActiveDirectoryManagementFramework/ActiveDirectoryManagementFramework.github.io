@@ -14,7 +14,7 @@ Tests whether a forest is configured according to baseline configuration
 
 ```
 Test-AdmfForest [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>]
- [[-Options] <UpdateForestOptions[]>] [[-CredentialProvider] <String>] [<CommonParameters>]
+ [[-Options] <UpdateForestOptions[]>] [[-CredentialProvider] <String>] [-ContextPrompt] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,7 +69,7 @@ Defaults to all tests.
 Type: UpdateForestOptions[]
 Parameter Sets: (All)
 Aliases:
-Accepted values: Sites, Subnets, SiteLinks, Topology, ServerRelocate, Schema, SchemaLdif, AllSchema, NTAuthStore, Default, All
+Accepted values: Sites, Subnets, SiteLinks, Topology, ServerRelocate, Schema, SchemaLdif, NTAuthStore, Default, ForestLevel, ExchangeSchema, SchemaDefaultPermissions, AllSchema, All
 
 Required: False
 Position: 3
@@ -90,6 +90,21 @@ Aliases:
 Required: False
 Position: 4
 Default value: Default
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContextPrompt
+Force displaying the Context selection User Interface.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: Ctx
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

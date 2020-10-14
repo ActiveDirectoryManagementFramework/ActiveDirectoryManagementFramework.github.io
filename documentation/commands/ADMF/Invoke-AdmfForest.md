@@ -14,7 +14,7 @@ Applies the currently desired configuration to the targeted forest.
 
 ```
 Invoke-AdmfForest [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>]
- [[-Options] <UpdateForestOptions[]>] [[-CredentialProvider] <String>] [-WhatIf] [-Confirm]
+ [[-Options] <UpdateForestOptions[]>] [[-CredentialProvider] <String>] [-ContextPrompt] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -78,7 +78,7 @@ To update everything, use "All".
 Type: UpdateForestOptions[]
 Parameter Sets: (All)
 Aliases:
-Accepted values: Sites, Subnets, SiteLinks, Topology, ServerRelocate, Schema, SchemaLdif, AllSchema, NTAuthStore, Default, All
+Accepted values: Sites, Subnets, SiteLinks, Topology, ServerRelocate, Schema, SchemaLdif, NTAuthStore, Default, ForestLevel, ExchangeSchema, SchemaDefaultPermissions, AllSchema, All
 
 Required: False
 Position: 3
@@ -99,6 +99,21 @@ Aliases:
 Required: False
 Position: 4
 Default value: Default
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContextPrompt
+Force displaying the Context selection User Interface.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: Ctx
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

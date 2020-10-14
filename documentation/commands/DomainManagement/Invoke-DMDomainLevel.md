@@ -1,33 +1,33 @@
 ---
-external help file: ADMF-help.xml
-Module Name: ADMF
+external help file: DomainManagement-help.xml
+Module Name: DomainManagement
 online version:
 schema: 2.0.0
 ---
 
-# Invoke-AdmfDC
+# Invoke-DMDomainLevel
 
 ## SYNOPSIS
-Brings all DCs of the target domain into the desired/defined state.
+Applies the desired domain level if needed.
 
 ## SYNTAX
 
 ```
-Invoke-AdmfDC [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>] [[-Options] <UpdateDCOptions[]>]
- [[-CredentialProvider] <String>] [-ContextPrompt] [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-DMDomainLevel [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>] [-EnableException]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Brings all DCs of the target domain into the desired/defined state.
+Applies the desired domain level if needed.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-Invoke-AdmfDC -Server corp.contoso.com
+Invoke-DMDomainLevel -Server contoso.com
 ```
 
-Brings all DCs of the domain corp.contoso.com into the desired/defined state.
+Raises the domain "contoso.com" to the desired level if needed.
 
 ## PARAMETERS
 
@@ -61,46 +61,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Options
-Which aspects to actually update.
-By default, all Components are applied.
-
-```yaml
-Type: UpdateDCOptions[]
-Parameter Sets: (All)
-Aliases:
-Accepted values: Share, FSAccessRule, Default, All
-
-Required: False
-Position: 3
-Default value: Default
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CredentialProvider
-The credential provider to use to resolve the input credentials.
-See help on Register-AdmfCredentialProvider for details.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 4
-Default value: Default
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ContextPrompt
-Force displaying the Context selection User Interface.
+### -EnableException
+This parameters disables user-friendly warnings and enables the throwing of exceptions.
+This is less user friendly, but allows catching exceptions in calling scripts.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: Ctx
+Aliases:
 
 Required: False
 Position: Named

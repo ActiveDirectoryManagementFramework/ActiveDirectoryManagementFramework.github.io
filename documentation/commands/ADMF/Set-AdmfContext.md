@@ -14,14 +14,14 @@ Applies a set of configuration contexts.
 
 ### name (Default)
 ```
-Set-AdmfContext -Context <Object[]> [-ReUse] [-Server <ComputerParameter>] [-Credential <PSCredential>]
- [-NoDomain] [-EnableException] [<CommonParameters>]
+Set-AdmfContext -Context <Object[]> [-ReUse] [-DefineOnly] [-Server <ComputerParameter>]
+ [-Credential <PSCredential>] [-NoDomain] [-EnableException] [<CommonParameters>]
 ```
 
 ### interactive
 ```
-Set-AdmfContext [-Interactive] [-ReUse] [-Server <ComputerParameter>] [-Credential <PSCredential>] [-NoDomain]
- [-EnableException] [<CommonParameters>]
+Set-AdmfContext [-Interactive] [-ReUse] [-DefineOnly] [-Server <ComputerParameter>]
+ [-Credential <PSCredential>] [-NoDomain] [-EnableException] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -89,6 +89,22 @@ Accept wildcard characters: False
 ADMF remembers the last contexts assigned to a specific server/domain.
 By setting this parameter, it will re-use those contexts, rather than show the prompt again.
 This parameter is used by the system to prevent prompting automatically on each call.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefineOnly
+Do not actually switch configuration sets.
+Just register the selected Contexts to the target domain, after validating the selection.
 
 ```yaml
 Type: SwitchParameter
