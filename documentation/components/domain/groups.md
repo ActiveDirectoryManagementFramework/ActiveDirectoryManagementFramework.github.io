@@ -29,7 +29,7 @@ This creates the "Tier 1 Accounts" global group under the specified OU.
 Convert all groups to configuration:
 
 ```powershell
-Get-ADGroup -Filter * | Select-PSFObject @{
+Get-ADGroup -Filter * -Property Description | Select-PSFObject @{
   Name = 'Path'
   Expression = { $_.DistinguishedName -replace ',DC=.+$',',%DomainDN%' }
 }, Name, "Description to string", 'GroupScope as Scope to String' | convertTo-Json
