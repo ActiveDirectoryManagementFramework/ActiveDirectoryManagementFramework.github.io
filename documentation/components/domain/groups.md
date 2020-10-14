@@ -31,7 +31,7 @@ Convert all groups to configuration:
 ```powershell
 Get-ADGroup -Filter * -Property Description | Select-PSFObject @{
   Name = 'Path'
-  Expression = { $_.DistinguishedName -replace ',DC=.+$',',%DomainDN%' }
+  Expression = { $_.DistinguishedName -replace ',DC=.+$',',%DomainDN%' -replace '^.+?,' }
 }, Name, "Description to string", 'GroupScope as Scope to String' | convertTo-Json
 ```
 
