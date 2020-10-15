@@ -20,7 +20,7 @@ Define a global (=All GPOs) FullControl right for the group "SEC-GPO-Admins":
 ```json
 {
     "All": true,
-    "Identity":  "%DomainName%\SEC-GPO-Admins",
+    "Identity":  "%DomainName%\\SEC-GPO-Admins",
     "ObjectClass":  "Group",
     "Permission":  "GpoEditDeleteModifySecurity"
 }
@@ -31,7 +31,7 @@ Define an access rule, that grants the ClientAdmin group full control over the G
 ```json
 {
     "GpoName":  "Client-G-Security-Baseline",
-    "Identity":  "%DomainName%\ClientAdmins",
+    "Identity":  "%DomainName%\\ClientAdmins",
     "ObjectClass":  "Group",
     "Permission":  "GpoEditDeleteModifySecurity"
 }
