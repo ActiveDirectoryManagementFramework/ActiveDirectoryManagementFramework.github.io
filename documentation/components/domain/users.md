@@ -30,13 +30,13 @@ This configuration will create a new "Tier 0" admin account for John Smith at th
 The following command allows you to generate json configuration data for all users under the specified OU:
 
 ```powershell
-Get-ADuser -Searchbase 'CN=Tier0,DC=contoso,DC=com' -Properties Description | Select-PSFObject @(
+Get-ADuser -Searchbase 'CN=Tier0,DC=contoso,DC=com' -Properties Description -Filter * | Select-PSFObject @(
   'SamAccountName'
   'GivenName'
   'Surname'
   'Description To string'
   'UserPrincipalName'
-  @{ Name = 'Path'; Expression = { $_.DistinguishedName -replace 'DC=.+$','%DomainDN%' }}
+  @{ Name = 'Path'; Expression = { $_.DistinguishedName -replace 'DC=.+$','%DomainDN%' -replace '^.+?,' }}
 ) | ConvertTo-Json
 ```
 
