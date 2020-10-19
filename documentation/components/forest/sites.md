@@ -26,7 +26,7 @@ Sites cannot be deleted, so long as at least a single domain controller is assig
 Converts all current sites into configuration json:
 
 ```powershell
-Get-ADReplicationSite -Properties Location |
+Get-ADReplicationSite -Properties Location -Filter * |
     Select-Object Name, Description, Location |
         ConvertTo-Json
 ```

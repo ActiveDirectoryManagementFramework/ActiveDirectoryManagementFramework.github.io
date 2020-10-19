@@ -28,9 +28,9 @@ Other services too will use this for network traffic optimization.
 Create configuration based off current subnet configuration:
 
 ```powershell
-$allSubnets = Get-ADReplicationSubnet @parameters -Filter * -Properties Description | Select-Object *,  @{
+$allSubnets = Get-ADReplicationSubnet -Filter * -Properties Description | Select-Object *,  @{
     Name = "SiteName"
-    Expression = { ($_.Site | Get-ADObject @parameters).Name }
+    Expression = { ($_.Site | Get-ADObject).Name }
 }
 $allSubnets | Select-Object SiteName, Name, Description, Location | ConvertTo-Json
 ```
