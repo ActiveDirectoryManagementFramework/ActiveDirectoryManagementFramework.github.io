@@ -85,3 +85,7 @@ Default: $true | Optional: yes
 
 Whether the group should exist.
 Set to $false for explicitly deleting groups, rather than creating them.
+
+### Optional
+
+Group is tolerated if it exists, but will not be created if not.

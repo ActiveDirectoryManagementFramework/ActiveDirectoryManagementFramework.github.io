@@ -59,3 +59,20 @@ A filter used to find all objects in AD that match this category.
 > ParameterSet: LdapFilter
 
 An LDAP filter used to find all objects in AD that match this category.
+
+### SearchBase
+
+Optional: Yes | Default: %DomainDN%
+
+The path under which to look for objects of this category.
+
+> This parameter uses [name resolution](../../advanced/name-mapping.html).
+
+### SearchScope
+
+How deep to search for objects of this category under the chosen searchbase.
+Supported Values:
+
+|Subtree|All items under the searchbase. (default)|
+|OneLevel|All items directly under the searchbase.|
+|Base|Only the searchbase itself is inspected.|

@@ -71,6 +71,10 @@
         {
             "Label":  "Users",
             "Link":  "users.html"
+        },
+        {
+            "Label":  "Service Accounts",
+            "Link":  "serviceaccounts.html"
         }
     ]
 }

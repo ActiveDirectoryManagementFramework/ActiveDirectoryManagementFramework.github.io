@@ -35,6 +35,7 @@ A few object types can be used for both however (Access Rules, Custom AD Objects
 + [Objects](domain/objects.html)
 + [Organizational Units](domain/organizationalunits.html)
 + [Finegrained Password Policies](domain/password-policies.html)
++ [Service Accounts](domain/serviceaccounts.html)
 + [Users](domain/users.html)
 
 ## Forest
