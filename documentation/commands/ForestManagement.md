@@ -1,6 +1,14 @@
 # ForestManagement Command Reference
 
 
+## Certificate
+
+ - [Get-FMCertificate](ForestManagement/Get-FMCertificate.html)
+ - [Invoke-FMCertificate](ForestManagement/Invoke-FMCertificate.html)
+ - [Register-FMCertificate](ForestManagement/Register-FMCertificate.html)
+ - [Test-FMCertificate](ForestManagement/Test-FMCertificate.html)
+ - [Unregister-FMCertificate](ForestManagement/Unregister-FMCertificate.html)
+
 ## ExchangeSchema
 
  - [Get-FMExchangeSchema](ForestManagement/Get-FMExchangeSchema.html)

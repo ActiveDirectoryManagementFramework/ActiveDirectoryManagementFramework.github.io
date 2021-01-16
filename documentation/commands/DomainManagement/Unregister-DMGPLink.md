@@ -12,8 +12,14 @@ Removes a group policy link from the configured desired state.
 
 ## SYNTAX
 
+### Path (Default)
 ```
-Unregister-DMGPLink [-PolicyName] <String> [-OrganizationalUnit] <String> [<CommonParameters>]
+Unregister-DMGPLink -PolicyName <String> -OrganizationalUnit <String> [<CommonParameters>]
+```
+
+### Filter
+```
+Unregister-DMGPLink -PolicyName <String> -OUFilter <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +45,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -50,11 +56,26 @@ The name of the organizational unit the policy should be unregistered from.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Path
 Aliases: OU
 
 Required: True
-Position: 2
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -OUFilter
+The filter of the filterbased policy link to remove
+
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases:
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

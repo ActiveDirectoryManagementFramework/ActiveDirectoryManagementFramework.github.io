@@ -13,7 +13,7 @@ Registers an organizational unit, defining it as a desired state.
 ## SYNTAX
 
 ```
-Register-DMOrganizationalUnit [-Name] <String> [-Description] <String> [-Path] <String>
+Register-DMOrganizationalUnit [-Name] <String> [-Description] <String> [-Path] <String> [[-Optional] <Boolean>]
  [[-OldNames] <String[]>] [[-Present] <Boolean>] [<CommonParameters>]
 ```
 
@@ -79,6 +79,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Optional
+By default, organizational units must exist if defined.
+Setting this to true makes them optional instead - they will not be created but are tolerated if they exist.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 4
+Default value: False
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -OldNames
 Previous names the OU had.
 During invocation, if it is not found but an OU in the same path with a listed old name IS, it will be renamed.
@@ -90,7 +106,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 4
+Position: 5
 Default value: @()
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -106,7 +122,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 5
+Position: 6
 Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False

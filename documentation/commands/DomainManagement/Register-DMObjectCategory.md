@@ -15,13 +15,14 @@ Registers a new object category.
 ### Filter (Default)
 ```
 Register-DMObjectCategory -Name <String> -ObjectClass <String> -Property <String[]> -TestScript <ScriptBlock>
- -Filter <String> [<CommonParameters>]
+ -Filter <String> [-SearchBase <String>] [-SearchScope <String>] [-ContextName <String>] [<CommonParameters>]
 ```
 
 ### LdapFilter
 ```
 Register-DMObjectCategory -Name <String> -ObjectClass <String> -Property <String[]> -TestScript <ScriptBlock>
- -LdapFilter <String> [<CommonParameters>]
+ -LdapFilter <String> [-SearchBase <String>] [-SearchScope <String>] [-ContextName <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -136,6 +137,60 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SearchBase
+The path under which to look for objects of this category.
+Defaults to domain wide.
+Supports string resolution.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: %DomainDN%
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SearchScope
+How deep to search for objects of this category under the chosen searchbase.
+Supported Values:
+- Subtree: All items under the searchbase.
+(default)
+- OneLevel: All items directly under the searchbase.
+- Base: Only the searchbase itself is inspected.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Subtree
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ContextName
+The name of the context defining the setting.
+This allows determining the configuration set that provided this setting.
+Used by the ADMF, available to any other configuration management solution.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: <Undefined>
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

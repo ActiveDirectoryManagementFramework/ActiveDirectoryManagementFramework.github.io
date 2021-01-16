@@ -5,58 +5,44 @@ online version:
 schema: 2.0.0
 ---
 
-# Unregister-DMAcl
+# Get-DMServiceAccount
 
 ## SYNOPSIS
-Removes a acl that had previously been registered.
+List the configured service accounts.
 
 ## SYNTAX
 
 ```
-Unregister-DMAcl [[-Path] <String[]>] [[-Category] <String[]>] [<CommonParameters>]
+Get-DMServiceAccount [[-Name] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Removes a acl that had previously been registered.
+List the configured service accounts.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-Get-DMAcl | Unregister-DMAcl
+Get-DMServiceAccount
 ```
 
-Clears all registered acls.
+List all configured service accounts.
 
 ## PARAMETERS
 
-### -Path
-The path (distinguishedName) of the acl to remove.
+### -Name
+Name to filter by.
+Defaults to '*'
 
 ```yaml
-Type: String[]
+Type: String
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -Category
-The object category the acl settings apply to
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName)
+Default value: *
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -1,35 +1,67 @@
 ---
-external help file: ADMF-help.xml
-Module Name: ADMF
+external help file: DomainManagement-help.xml
+Module Name: DomainManagement
 online version:
 schema: 2.0.0
 ---
 
-# Test-AdmfForest
+# Find-DMObjectCategoryItem
 
 ## SYNOPSIS
-Tests whether a forest is configured according to baseline configuration
+Searches for items that are part of an object category.
 
 ## SYNTAX
 
 ```
-Test-AdmfForest [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>]
- [[-Options] <UpdateForestOptions[]>] [[-CredentialProvider] <String>] [-ContextPrompt] [<CommonParameters>]
+Find-DMObjectCategoryItem [-Name] <String> [[-Property] <String[]>] [[-Server] <ComputerParameter>]
+ [[-Credential] <PSCredential>] [-EnableException] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Tests whether a forest is configured according to baseline configuration
+Searches for items that are part of an object category.
+Caution: A combination of inefficient filters and large scope can lead to significant performance delays in large environments!
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-Test-AdmfForest
+Find-DMObjectCategoryItem -Name 'CAServer'
 ```
 
-Test the current forest for baseline compliance.
+Find all objects that are part of the CAServer category.
 
 ## PARAMETERS
+
+### -Name
+The name of the object category to search items for.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Property
+Properties to include when retrieving matching items.
+Ensure the property is legal for all potential matches.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Server
 The server / domain to work with.
@@ -40,7 +72,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 1
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -55,52 +87,20 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 2
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Options
-What tests to execute.
-Defaults to all tests.
-
-```yaml
-Type: UpdateForestOptions[]
-Parameter Sets: (All)
-Aliases:
-Accepted values: Sites, Subnets, SiteLinks, Topology, ServerRelocate, Schema, SchemaLdif, NTAuthStore, ForestLevel, ExchangeSchema, SchemaDefaultPermissions, AllSchema, Certificates, Default, All
-
-Required: False
-Position: 3
-Default value: All
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CredentialProvider
-The credential provider to use to resolve the input credentials.
-See help on Register-AdmfCredentialProvider for details.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 4
-Default value: Default
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ContextPrompt
-Force displaying the Context selection User Interface.
+### -EnableException
+This parameters disables user-friendly warnings and enables the throwing of exceptions.
+This is less user friendly, but allows catching exceptions in calling scripts.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: Ctx
+Aliases:
 
 Required: False
 Position: Named

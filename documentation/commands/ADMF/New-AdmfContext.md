@@ -15,15 +15,15 @@ Creates a new configuration context for ADMF.
 ### Store (Default)
 ```
 New-AdmfContext -Name <String> [-Store <String>] [-Weight <Int32>] [-Description <String>] [-Author <String>]
- [-Group <String>] [-Prerequisite <String[]>] [-MutuallyExclusive <String[]>] [-DefaultAccessRules]
- [-IncludeTemplate] [-Force] [-EnableException] [<CommonParameters>]
+ [-Group <String>] [-Prerequisite <String[]>] [-MutuallyExclusive <String[]>] [-DefaultAccessRules] [-Force]
+ [-EnableException] [<CommonParameters>]
 ```
 
 ### Path
 ```
 New-AdmfContext -Name <String> [-OutPath <String>] [-Weight <Int32>] [-Description <String>] [-Author <String>]
- [-Group <String>] [-Prerequisite <String[]>] [-MutuallyExclusive <String[]>] [-DefaultAccessRules]
- [-IncludeTemplate] [-Force] [-EnableException] [<CommonParameters>]
+ [-Group <String>] [-Prerequisite <String[]>] [-MutuallyExclusive <String[]>] [-DefaultAccessRules] [-Force]
+ [-EnableException] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -208,22 +208,6 @@ A new Active Directory environment comes with more deployed security delegations
 Several containers - especially the BuiltIn container - have a lot of extra access rules.
 When deploying a restrictive domain content mode, where these objects fall under management, it becomes necessary to also configure these delegations, lest they be removed.
 Setting this switch will include all the default delegations in your new context.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeTemplate
-Whether to include example configuration files in the context.
-These must all be corrected or removed later on, but offer some initial guidance in how a configuration set for a given setting type might look like.
 
 ```yaml
 Type: SwitchParameter

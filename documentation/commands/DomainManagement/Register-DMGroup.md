@@ -15,7 +15,7 @@ Registers an active directory group.
 ```
 Register-DMGroup [-Name] <String> [[-SamAccountName] <String>] [-Path] <String> [-Description] <String>
  [-Scope] <String> [[-Category] <String>] [[-OldNames] <String[]>] [[-Present] <Boolean>]
- [[-ContextName] <String>] [<CommonParameters>]
+ [[-Optional] <Boolean>] [[-ContextName] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -163,6 +163,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Optional
+Group is tolerated if it exists, but will not be created if not.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 9
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ContextName
 The name of the context defining the setting.
 This allows determining the configuration set that provided this setting.
@@ -174,7 +189,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 9
+Position: 10
 Default value: <Undefined>
 Accept pipeline input: False
 Accept wildcard characters: False

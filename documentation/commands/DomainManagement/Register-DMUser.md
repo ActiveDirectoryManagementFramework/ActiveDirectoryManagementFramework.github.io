@@ -15,7 +15,8 @@ Registers a user definition into the configuration domains are compared to.
 ```
 Register-DMUser [-SamAccountName] <String> [[-Name] <String>] [[-GivenName] <String>] [[-Surname] <String>]
  [[-Description] <String>] [-PasswordNeverExpires] [-UserPrincipalName] <String> [-Path] <String>
- [[-Enabled] <TriBool>] [[-OldNames] <String[]>] [[-Present] <Boolean>] [<CommonParameters>]
+ [[-Enabled] <TriBool>] [[-Optional] <Boolean>] [[-OldNames] <String[]>] [[-Present] <Boolean>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -185,6 +186,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Optional
+By default, all defined user accounts must exist.
+By setting a user account optional, it will be tolerated if it exists, but not created if it does not.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 9
+Default value: False
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -OldNames
 Previous names the user object had.
 Will trigger a rename if a user is found under one of the old names but not the current one.
@@ -196,7 +213,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 9
+Position: 10
 Default value: @()
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -212,7 +229,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 10
+Position: 11
 Default value: True
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

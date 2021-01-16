@@ -225,6 +225,26 @@
                         "Link":  "Unregister-DMPasswordPolicy.html"
                     },
                     {
+                        "Label":  "Get-DMServiceAccount",
+                        "Link":  "Get-DMServiceAccount.html"
+                    },
+                    {
+                        "Label":  "Invoke-DMServiceAccount",
+                        "Link":  "Invoke-DMServiceAccount.html"
+                    },
+                    {
+                        "Label":  "Register-DMServiceAccount",
+                        "Link":  "Register-DMServiceAccount.html"
+                    },
+                    {
+                        "Label":  "Test-DMServiceAccount",
+                        "Link":  "Test-DMServiceAccount.html"
+                    },
+                    {
+                        "Label":  "Unregister-DMServiceAccount",
+                        "Link":  "Unregister-DMServiceAccount.html"
+                    },
+                    {
                         "Label":  "Get-DMUser",
                         "Link":  "Get-DMUser.html"
                     },
@@ -251,6 +271,10 @@
                     {
                         "Label":  "Convert-DMSchemaGuid",
                         "Link":  "Convert-DMSchemaGuid.html"
+                    },
+                    {
+                        "Label":  "Find-DMObjectCategoryItem",
+                        "Link":  "Find-DMObjectCategoryItem.html"
                     },
                     {
                         "Label":  "Get-DMAccessRuleMode",

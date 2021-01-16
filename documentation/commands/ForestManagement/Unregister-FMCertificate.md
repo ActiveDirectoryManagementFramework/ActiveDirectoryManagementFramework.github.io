@@ -1,37 +1,38 @@
 ---
-external help file: DomainManagement-help.xml
-Module Name: DomainManagement
+external help file: ForestManagement-help.xml
+Module Name: ForestManagement
 online version:
 schema: 2.0.0
 ---
 
-# Unregister-DMAcl
+# Unregister-FMCertificate
 
 ## SYNOPSIS
-Removes a acl that had previously been registered.
+Removes a certificate definition for the NTAuthStore.
 
 ## SYNTAX
 
 ```
-Unregister-DMAcl [[-Path] <String[]>] [[-Category] <String[]>] [<CommonParameters>]
+Unregister-FMCertificate [[-Thumbprint] <String[]>] [[-Certificate] <X509Certificate2[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Removes a acl that had previously been registered.
+Removes a certificate definition for the NTAuthStore.
+See Register-FMCertificate tfor details on defining a certificate.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-Get-DMAcl | Unregister-DMAcl
+Get-FMCertificate | Unregister-FMCertificate
 ```
 
-Clears all registered acls.
+Clears all certificates from the list of defined NTAuth certificates
 
 ## PARAMETERS
 
-### -Path
-The path (distinguishedName) of the acl to remove.
+### -Thumbprint
+The thumbprint of the certificate to remove.
 
 ```yaml
 Type: String[]
@@ -45,18 +46,18 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -Category
-The object category the acl settings apply to
+### -Certificate
+The certificate to remove.
 
 ```yaml
-Type: String[]
+Type: X509Certificate2[]
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: 2
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 

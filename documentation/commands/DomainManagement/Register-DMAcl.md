@@ -12,9 +12,21 @@ Registers an active directory acl.
 
 ## SYNTAX
 
+### path (Default)
 ```
-Register-DMAcl [-Path] <String> [-Owner] <String> [[-NoInheritance] <Boolean>] [[-Optional] <Boolean>]
- [<CommonParameters>]
+Register-DMAcl -Path <String> -Owner <String> [-NoInheritance <Boolean>] [-Optional <Boolean>]
+ [-ContextName <String>] [<CommonParameters>]
+```
+
+### category
+```
+Register-DMAcl -ObjectCategory <String> -Owner <String> [-NoInheritance <Boolean>] [-Optional <Boolean>]
+ [-ContextName <String>] [<CommonParameters>]
+```
+
+### DefaultOwner
+```
+Register-DMAcl -Owner <String> [-DefaultOwner] [-ContextName <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,11 +50,26 @@ Subject to string insertion.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: path
 Aliases:
 
 Required: True
-Position: 1
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ObjectCategory
+Assign ACL settings based on the ObjectCategory of an object.
+
+```yaml
+Type: String
+Parameter Sets: category
+Aliases:
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -58,7 +85,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 2
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -70,11 +97,11 @@ Defaults to $false
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: path, category
 Aliases:
 
 Required: False
-Position: 3
+Position: Named
 Default value: False
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -87,13 +114,45 @@ It will also ignore access errors on the object.
 
 ```yaml
 Type: Boolean
+Parameter Sets: path, category
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultOwner
+Whether to make this the default owner for objects not specified under either a path or an object category.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: DefaultOwner
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContextName
+The name of the context defining the setting.
+This allows determining the configuration set that provided this setting.
+Used by the ADMF, available to any other configuration management solution.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 4
-Default value: False
-Accept pipeline input: True (ByPropertyName)
+Position: Named
+Default value: <Undefined>
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

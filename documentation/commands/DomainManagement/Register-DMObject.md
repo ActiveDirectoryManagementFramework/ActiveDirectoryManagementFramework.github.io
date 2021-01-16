@@ -13,7 +13,7 @@ Registers a generic object as the desired state for active directory.
 ## SYNTAX
 
 ```
-Register-DMObject [-Path] <String> [-Name] <String> [-ObjectClass] <String> [[-Attributes] <Object>]
+Register-DMObject [-Path] <String> [[-Name] <String>] [-ObjectClass] <String> [[-Attributes] <Object>]
  [[-AttributesToResolve] <String[]>] [<CommonParameters>]
 ```
 
@@ -57,7 +57,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)

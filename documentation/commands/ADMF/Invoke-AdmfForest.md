@@ -78,7 +78,7 @@ To update everything, use "All".
 Type: UpdateForestOptions[]
 Parameter Sets: (All)
 Aliases:
-Accepted values: Sites, Subnets, SiteLinks, Topology, ServerRelocate, Schema, SchemaLdif, NTAuthStore, Default, ForestLevel, ExchangeSchema, SchemaDefaultPermissions, AllSchema, All
+Accepted values: Sites, Subnets, SiteLinks, Topology, ServerRelocate, Schema, SchemaLdif, NTAuthStore, ForestLevel, ExchangeSchema, SchemaDefaultPermissions, AllSchema, Certificates, Default, All
 
 Required: False
 Position: 3

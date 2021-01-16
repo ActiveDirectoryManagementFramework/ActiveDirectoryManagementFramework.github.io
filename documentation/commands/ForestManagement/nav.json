@@ -5,6 +5,26 @@
                },
     "fellows":  [
                     {
+                        "Label":  "Get-FMCertificate",
+                        "Link":  "Get-FMCertificate.html"
+                    },
+                    {
+                        "Label":  "Invoke-FMCertificate",
+                        "Link":  "Invoke-FMCertificate.html"
+                    },
+                    {
+                        "Label":  "Register-FMCertificate",
+                        "Link":  "Register-FMCertificate.html"
+                    },
+                    {
+                        "Label":  "Test-FMCertificate",
+                        "Link":  "Test-FMCertificate.html"
+                    },
+                    {
+                        "Label":  "Unregister-FMCertificate",
+                        "Link":  "Unregister-FMCertificate.html"
+                    },
+                    {
                         "Label":  "Get-FMExchangeSchema",
                         "Link":  "Get-FMExchangeSchema.html"
                     },

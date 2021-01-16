@@ -89,6 +89,14 @@
  - [Test-DMPasswordPolicy](DomainManagement/Test-DMPasswordPolicy.html)
  - [Unregister-DMPasswordPolicy](DomainManagement/Unregister-DMPasswordPolicy.html)
 
+## ServiceAccount
+
+ - [Get-DMServiceAccount](DomainManagement/Get-DMServiceAccount.html)
+ - [Invoke-DMServiceAccount](DomainManagement/Invoke-DMServiceAccount.html)
+ - [Register-DMServiceAccount](DomainManagement/Register-DMServiceAccount.html)
+ - [Test-DMServiceAccount](DomainManagement/Test-DMServiceAccount.html)
+ - [Unregister-DMServiceAccount](DomainManagement/Unregister-DMServiceAccount.html)
+
 ## User
 
  - [Get-DMUser](DomainManagement/Get-DMUser.html)
@@ -101,6 +109,7 @@
 
  - [Clear-DMConfiguration](DomainManagement/Clear-DMConfiguration.html)
  - [Convert-DMSchemaGuid](DomainManagement/Convert-DMSchemaGuid.html)
+ - [Find-DMObjectCategoryItem](DomainManagement/Find-DMObjectCategoryItem.html)
  - [Get-DMAccessRuleMode](DomainManagement/Get-DMAccessRuleMode.html)
  - [Get-DMCallback](DomainManagement/Get-DMCallback.html)
  - [Get-DMContentMode](DomainManagement/Get-DMContentMode.html)

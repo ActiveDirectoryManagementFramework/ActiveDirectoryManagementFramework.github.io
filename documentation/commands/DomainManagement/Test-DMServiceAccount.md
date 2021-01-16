@@ -5,58 +5,59 @@ online version:
 schema: 2.0.0
 ---
 
-# Unregister-DMAcl
+# Test-DMServiceAccount
 
 ## SYNOPSIS
-Removes a acl that had previously been registered.
+Tests whether the currently deployed service accoaunts match the configured desired state.
 
 ## SYNTAX
 
 ```
-Unregister-DMAcl [[-Path] <String[]>] [[-Category] <String[]>] [<CommonParameters>]
+Test-DMServiceAccount [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Removes a acl that had previously been registered.
+Tests whether the currently deployed service accoaunts match the configured desired state.
+Use Register-DMServiceAccount to define the desired state.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-Get-DMAcl | Unregister-DMAcl
+Test-DMServiceAccount -Server contoso.com
 ```
 
-Clears all registered acls.
+Tests whether the service accounts in the contoso.com domain are compliant with the desired state.
 
 ## PARAMETERS
 
-### -Path
-The path (distinguishedName) of the acl to remove.
+### -Server
+The server / domain to work with.
 
 ```yaml
-Type: String[]
+Type: ComputerParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: 1
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Category
-The object category the acl settings apply to
+### -Credential
+The credentials to use for this operation.
 
 ```yaml
-Type: String[]
+Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: 2
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

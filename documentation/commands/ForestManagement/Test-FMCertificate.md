@@ -1,62 +1,63 @@
 ---
-external help file: DomainManagement-help.xml
-Module Name: DomainManagement
+external help file: ForestManagement-help.xml
+Module Name: ForestManagement
 online version:
 schema: 2.0.0
 ---
 
-# Unregister-DMAcl
+# Test-FMCertificate
 
 ## SYNOPSIS
-Removes a acl that had previously been registered.
+Tests, whether the certificate stores are in the desired state.
 
 ## SYNTAX
 
 ```
-Unregister-DMAcl [[-Path] <String[]>] [[-Category] <String[]>] [<CommonParameters>]
+Test-FMCertificate [[-Server] <ComputerParameter>] [[-Credential] <PSCredential>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Removes a acl that had previously been registered.
+Tests, whether the certificate stores are in the desired state, that is, all defined certificates are already in place.
+Use Register-FMCertificate to define desired the desired state.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-Get-DMAcl | Unregister-DMAcl
+Test-FMCertificate -Server contoso.com
 ```
 
-Clears all registered acls.
+Checks whether the contoso.com forest has all the certificates it should
 
 ## PARAMETERS
 
-### -Path
-The path (distinguishedName) of the acl to remove.
+### -Server
+The server / domain to work with.
 
 ```yaml
-Type: String[]
+Type: ComputerParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: 1
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Category
-The object category the acl settings apply to
+### -Credential
+The credentials to use for this operation.
 
 ```yaml
-Type: String[]
+Type: PSCredential
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: 2
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

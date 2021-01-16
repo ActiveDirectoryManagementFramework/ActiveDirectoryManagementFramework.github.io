@@ -104,7 +104,7 @@ This exists in order to be able to create
 Type: UpdateDomainOptions[]
 Parameter Sets: (All)
 Aliases:
-Accepted values: AccessRule, Acl, GPLink, GPPermission, GroupPolicy, GroupMembership, Group, OUSoft, OUHard, PSO, Security, User, AllContent, GPLinkDisable, AllLinks, GroupPolicyDelete, AllGP, Object, Default, DomainLevel, All
+Accepted values: AccessRule, Acl, GPLink, GPPermission, GroupPolicy, GroupMembership, Group, OUSoft, OUHard, PSO, Security, User, GPLinkDisable, AllLinks, GroupPolicyDelete, AllGP, Object, DomainLevel, ServiceAccount, AllContent, Default, All
 
 Required: False
 Position: 3
