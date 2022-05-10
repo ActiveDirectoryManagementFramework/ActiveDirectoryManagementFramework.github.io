@@ -29,9 +29,9 @@ Convert all Organizational Units into Json configuration:
 
 ```powershell
 Get-ADOrganizationalUnit -Filter * -Properties Description |
-    Select-Object @(
+    Select-PSFObject @(
         'Name'
-        'Description'
+        'Description to string'
         @{
             Name = 'Path'
             Expression = {
