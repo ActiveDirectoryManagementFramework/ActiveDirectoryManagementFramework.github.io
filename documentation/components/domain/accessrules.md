@@ -170,3 +170,45 @@ Optional: Yes | Default: false
 A boolean value, accepting either `true` or `false` (note: no quotes in json!).
 By default, the Domain Management module will complain about an object not existing when assigning an access rule to an object that ... well, doesn't exist.
 Setting `Optional` to `true` will make it ignore it instead.
+
+### Present
+
+Whether the access rule should exist or not.
+By default, it should.
+Set this to $false in order to explicitly delete an existing access rule.
+Set this to 'Undefined' to neither create nor delete it, in which case it will simply be accepted if it exists.
+
+Use this field to explicitly override schema default permissions if needed/desired.
+
+### NoFixConfig
+
+By default, Test-DMAccessRule will generate a "FixConfig" result for accessrules that have been explicitly defined but are also part of the Schema Default permissions.
+If this setting is enabled, this result object is suppressed.
+
+## Test Results
+
+> Update
+
+Some access rules on this Active Directory object need to be modified.
+This can contain one or multiple changes being applied to the specified object.
+
+Tip: Inspect the `Changed` property to get a list of individual changes for the given AD object!
+
+Change types:
+
++ Delete: An Undesired access rule is being removed from the object
++ Create: A missing access rule is being added to the object
++ Restore: A default permission for the object, as defined in the AD schema, is being re-applied to the object
++ FixConfig: This test result is written, when the configuration contains an access rule, that is already defined in the schema default. In other words, the configured access rule is redundant and can be removed from the configuration (or the schema default, if it should not be in there ...).
+
+Note: To prevent a specific schema default permission to be applied to an object (by generating a restore action), define that access rule and set its "Present" property to $false.
+
+> MissingADObject
+
+The Active Directory object for which Access Rules have been configured does not (yet) exist.
+This usually means you have not yet run the specific component of your config that would create the object.
+
+> NoAccess
+
+The used account has insufficient rights to read the security configuration.
+This usually means the account has been blocked from reading the ACL in question - try manually fixing those or using a different, higher privileged account instead.
