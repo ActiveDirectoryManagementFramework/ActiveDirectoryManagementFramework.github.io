@@ -1,0 +1,9 @@
+{
+  "Version": "1.0.0",
+  "Weight": 50,
+  "Description": "<Insert description-text here>",
+  "Author": "<Insert your name here>",
+  "Prerequisites": [],
+  "MutuallyExclusive": [],
+  "Group": "Default"
+}

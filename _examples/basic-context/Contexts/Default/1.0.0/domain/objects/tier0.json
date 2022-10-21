@@ -1,0 +1,18 @@
+{
+    "Path": "OU=Tier0,%DomainDN%",
+    "Name": "Core Connection",
+    "ObjectClass": "serviceConnectionPoint",
+    "Attributes": {
+        "keywords": [
+            "keyword1",
+            "keyword2",
+            "c6195500-2607-44f6-b9d1-85b5601f125f"
+        ],
+        "serviceBindingInformation": "https://tier0.core.%DomainFqdn%",
+        "Description": "Demo Service Connection Point for Domain %DomainName%"
+    },
+    "AttributesToResolve": [
+        "serviceBindingInformation",
+        "Description"
+    ]
+}

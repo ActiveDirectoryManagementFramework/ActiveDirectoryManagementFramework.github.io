@@ -1,0 +1,7 @@
+{
+    "WmiFilter":  "Server",
+    "Description":  null,
+    "DisplayName":  "TestGpo",
+    "ID":  "{64AB1559-4447-42F2-9B3A-65561658CE64}",
+    "ExportID":  "40b00dd5-8a82-40c6-9915-0fec97c5befd"
+}

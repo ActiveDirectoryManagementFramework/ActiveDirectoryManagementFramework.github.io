@@ -1,0 +1,32 @@
+[
+    {
+        "Name": "Tier2",
+        "Path": "%DomaiNDN%",
+        "Description": "Tier 2 root OU"
+    },
+    {
+        "Name": "Service Accounts",
+        "Path": "OU=Tier2,%DomaiNDN%",
+        "Description": "Tier 2 SAs"
+    },
+    {
+        "Name": "Groups",
+        "Path": "OU=Tier2,%DomaiNDN%",
+        "Description": "Tier 2 groups"
+    },
+    {
+        "Name": "PAWS",
+        "Path": "OU=Tier2,%DomaiNDN%",
+        "Description": "Tier 2 clients"
+    },
+    {
+        "Name": "Users",
+        "Path": "OU=Tier2,%DomaiNDN%",
+        "Description": "Tier 2 users"
+    },
+    {
+        "Name": "Servers",
+        "Path": "OU=Tier2,%DomaiNDN%",
+        "Description": "Tier 2 servers"
+    }
+]

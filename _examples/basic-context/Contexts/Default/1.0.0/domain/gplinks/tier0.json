@@ -1,0 +1,7 @@
+[
+    {
+        "PolicyName": "TestGpo",
+        "OrganizationalUnit": "OU=Servers,OU=Tier0,%DomainDN%",
+        "Precedence": 50
+    }
+]

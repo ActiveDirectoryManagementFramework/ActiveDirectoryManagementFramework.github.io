@@ -1,0 +1,12 @@
+[
+    {
+        "PolicyName": "Default Domain Policy",
+        "OrganizationalUnit": "%DomainDN%",
+        "Precedence": 50
+    },
+    {
+        "PolicyName": "Default Domain Controllers Policy",
+        "OrganizationalUnit": "OU=Domain Controllers,%DomainDN%",
+        "Precedence": 40
+    }
+]

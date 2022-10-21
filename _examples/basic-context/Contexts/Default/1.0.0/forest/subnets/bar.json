@@ -1,0 +1,8 @@
+[
+    {
+        "SiteName": "Bar",
+        "Name": "10.1.0.0/16",
+        "Description": "Bar Server Network",
+        "Location": "Hell"
+    }
+]

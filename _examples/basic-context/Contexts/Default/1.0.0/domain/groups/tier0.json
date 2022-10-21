@@ -1,0 +1,20 @@
+[
+    {
+        "Name": "Tier 0 Admins",
+        "Path": "OU=Groups,OU=Tier0,%DomainDN%",
+        "Scope": "DomainLocal",
+        "Description": "Uber awesome admin group"
+    },
+    {
+        "Name": "Tier 0 Users",
+        "Path": "OU=Groups,OU=Tier0,%DomainDN%",
+        "Scope": "DomainLocal",
+        "Description": "Uber awesome users group"
+    },
+    {
+        "Name": "PSO-Policy-T0-Accounts",
+        "Path": "OU=Groups,OU=Tier0,%DomainDN%",
+        "Scope": "DomainLocal",
+        "Description": "POS Assignment for T0 Accounts"
+    }
+]

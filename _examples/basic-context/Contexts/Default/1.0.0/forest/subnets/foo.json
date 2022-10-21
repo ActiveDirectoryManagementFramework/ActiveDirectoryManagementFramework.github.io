@@ -1,0 +1,14 @@
+[
+    {
+        "SiteName": "Foo",
+        "Name": "10.10.0.0/16",
+        "Description": "Foo Client Network",
+        "Location": "Hell"
+    },
+    {
+        "SiteName": "Foo",
+        "Name": "192.168.11.0/24",
+        "Description": "Foo Server Network",
+        "Location": "Hell"
+    }
+]

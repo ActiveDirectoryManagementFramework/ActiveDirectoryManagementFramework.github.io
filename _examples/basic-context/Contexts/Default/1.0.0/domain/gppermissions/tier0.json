@@ -1,0 +1,8 @@
+[
+    {
+        "Filter":  "Tier0",
+        "Identity":  "%DomainNetBIOSName%\\Tier 0 Admins",
+        "ObjectClass":  "Group",
+        "Permission":  "GpoEditDeleteModifySecurity"
+    }
+]

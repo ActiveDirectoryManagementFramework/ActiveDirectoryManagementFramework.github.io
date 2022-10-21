@@ -1,0 +1,7 @@
+[
+    {
+        "Path": "OU=Tier0,%DomainDN%",
+        "Owner": "%DomainSID%-512",
+        "NoInheritance": true
+    }
+]

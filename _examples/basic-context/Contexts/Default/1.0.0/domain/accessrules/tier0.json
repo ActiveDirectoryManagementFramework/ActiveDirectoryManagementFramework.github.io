@@ -1,0 +1,11 @@
+[
+    {
+        "Path": "OU=Tier0,%DomainDN%",
+        "ActiveDirectoryRights": "GenericAll",
+        "InheritanceType": "All",
+        "ObjectType": "00000000-0000-0000-0000-000000000000",
+        "InheritedObjectType": "00000000-0000-0000-0000-000000000000",
+        "AccessControlType": "Allow",
+        "Identity": "%DomainNetBiosName%\\Tier 0 Admins"
+    }
+]

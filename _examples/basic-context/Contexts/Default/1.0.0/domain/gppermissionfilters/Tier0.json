@@ -1,0 +1,7 @@
+[
+    {
+        "Name": "Tier0",
+        "Path": "OU=Tier0,%DomainDN%",
+        "PathScope": "SubTree"
+    }
+]

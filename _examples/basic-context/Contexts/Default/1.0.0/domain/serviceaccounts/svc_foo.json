@@ -1,0 +1,8 @@
+[
+    {
+        "Name": "svc_foo",
+        "Path": "OU=Service Accounts,OU=Tier0,%DomainDN%",
+        "Description": "Some service Account",
+        "DNSHostName": "svc_foo.%domainfqdn%"
+    }
+]

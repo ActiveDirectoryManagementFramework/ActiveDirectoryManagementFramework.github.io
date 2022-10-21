@@ -1,0 +1,140 @@
+[
+  {
+    "Path": "OU=Microsoft Exchange Protected Groups,%DomainDN%",
+    "Name": "Exchange Windows Permissions",
+    "Description": "This group contains Exchange servers that run Exchange cmdlets on behalf of users via the management service. Its members have permission to read and modify all Windows accounts and groups. This group should not be deleted.",
+    "Scope": "Universal"
+  },
+  {
+    "Path": "OU=Microsoft Exchange Security Groups,%DomainDN%",
+    "Name": "Organization Management",
+    "Description": "Members of this management role group have permissions to manage Exchange objects and their properties in the Exchange organization. Members can also delegate role groups and management roles in the organization. This role group shouldn't be deleted.",
+    "Scope": "Universal"
+  },
+  {
+    "Path": "OU=Microsoft Exchange Security Groups,%DomainDN%",
+    "Name": "Recipient Management",
+    "Description": "Members of this management role group have rights to create, manage, and remove Exchange recipient objects in the Exchange organization.",
+    "Scope": "Universal"
+  },
+  {
+    "Path": "OU=Microsoft Exchange Security Groups,%DomainDN%",
+    "Name": "View-Only Organization Management",
+    "Description": "Members of this management role group can view recipient and configuration objects and their properties in the Exchange organization.",
+    "Scope": "Universal"
+  },
+  {
+    "Path": "OU=Microsoft Exchange Security Groups,%DomainDN%",
+    "Name": "Public Folder Management",
+    "Description": "Members of this management role group can manage public folders. Members can create and delete public folders and manage public folder settings such as replicas, quotas, age limits, and permissions as well as mail-enable and mail-disable public folders.",
+    "Scope": "Universal"
+  },
+  {
+    "Path": "OU=Microsoft Exchange Security Groups,%DomainDN%",
+    "Name": "UM Management",
+    "Description": "Members of this management role group can manage Unified Messaging organization, server, and recipient configuration.",
+    "Scope": "Universal"
+  },
+  {
+    "Path": "OU=Microsoft Exchange Security Groups,%DomainDN%",
+    "Name": "Help Desk",
+    "Description": "Members of this management role group can view and manage the configuration for individual recipients and view recipients in an Exchange organization. Members of this role group can only manage the configuration each user can manage on his or her own mailbox. Additional  permissions can be added by assigning additional management roles to this role group.",
+    "Scope": "Universal"
+  },
+  {
+    "Path": "OU=Microsoft Exchange Security Groups,%DomainDN%",
+    "Name": "Records Management",
+    "Description": "Members of this management role group can configure compliance features such as retention policy tags, message classifications, transport rules, and more.",
+    "Scope": "Universal"
+  },
+  {
+    "Path": "OU=Microsoft Exchange Security Groups,%DomainDN%",
+    "Name": "Discovery Management",
+    "Description": "Members of this management role group can perform searches of mailboxes in the Exchange organization for data that meets specific criteria.",
+    "Scope": "Universal"
+  },
+  {
+    "Path": "OU=Microsoft Exchange Security Groups,%DomainDN%",
+    "Name": "Server Management",
+    "Description": "Members of this management role group have permissions to manage all Exchange servers within the Exchange organization, but members don't have permissions to perform operations that have global impact in the Exchange organization.",
+    "Scope": "Universal"
+  },
+  {
+    "Path": "OU=Microsoft Exchange Security Groups,%DomainDN%",
+    "Name": "Delegated Setup",
+    "Description": "Members of this management role group have permissions to install and uninstall Exchange on provisioned servers. This role group shouldn't be deleted.",
+    "Scope": "Universal"
+  },
+  {
+    "Path": "OU=Microsoft Exchange Security Groups,%DomainDN%",
+    "Name": "Hygiene Management",
+    "Description": "Members of this management role group can manage Exchange anti-spam features and grant permissions for antivirus products to integrate with Exchange.",
+    "Scope": "Universal"
+  },
+  {
+    "Path": "OU=Microsoft Exchange Security Groups,%DomainDN%",
+    "Name": "Compliance Management",
+    "Description": "This role group will allow a specified user, responsible for compliance, to properly configure and manage compliance settings within Exchange in accordance with their policy.",
+    "Scope": "Universal"
+  },
+  {
+    "Path": "OU=Microsoft Exchange Security Groups,%DomainDN%",
+    "Name": "Security Reader",
+    "Description": "Membership in this role group is synchronized across services and managed centrally. This role group is not manageable through the administrator portals. Members of this role group may include cross-service administrators, as well as external partner groups and Microsoft Support. By default, this group may not be assigned any roles. However, it will be a member of the Security Reader role groups and will inherit the capabilities of that role group.",
+    "Scope": "Universal"
+  },
+  {
+    "Path": "OU=Microsoft Exchange Security Groups,%DomainDN%",
+    "Name": "Security Administrator",
+    "Description": "Membership in this role group is synchronized across services and managed centrally. This role group is not manageable through the administrator portals. Members of this role group may include cross-service administrators, as well as external partner groups and Microsoft Support. By default, this group may not be assigned any roles. However, it will be a member of the Security Administrators role groups and will inherit the capabilities of that role group.",
+    "Scope": "Universal"
+  },
+  {
+    "Path": "OU=Microsoft Exchange Security Groups,%DomainDN%",
+    "Name": "Exchange Servers",
+    "Description": "This group contains all the Exchange servers. This group shouldn't be deleted.",
+    "Scope": "Universal"
+  },
+  {
+    "Path": "OU=Microsoft Exchange Security Groups,%DomainDN%",
+    "Name": "Exchange Trusted Subsystem",
+    "Description": "This group contains Exchange servers that run Exchange cmdlets on behalf of users via the management service. Its members have permission to read and modify all Exchange configuration, as well as user accounts and groups. This group should not be deleted.",
+    "Scope": "Universal"
+  },
+  {
+    "Path": "OU=Microsoft Exchange Security Groups,%DomainDN%",
+    "Name": "Managed Availability Servers",
+    "Description": "This group contains all the Managed Availability servers. This group shouldn't be deleted.",
+    "Scope": "Universal"
+  },
+  {
+    "Path": "OU=Microsoft Exchange Security Groups,%DomainDN%",
+    "Name": "ExchangeLegacyInterop",
+    "Description": "This group is for interoperability with Exchange 2003 servers within the same forest. This group should not be deleted.",
+    "Scope": "Universal"
+  },
+  {
+    "Path": "CN=Users,%DomainDN%",
+    "Name": "DnsAdmins",
+    "Description": "DNS Administrators Group",
+    "Scope": "DomainLocal"
+  },
+  {
+    "Path": "CN=Users,%DomainDN%",
+    "Name": "DnsUpdateProxy",
+    "Description": "DNS clients who are permitted to perform dynamic updates on behalf of some other clients (such as DHCP servers).",
+    "Scope": "Global"
+  },
+  {
+    "Path": "CN=Users,%DomainDN%",
+    "Name": "WSUS Administrators",
+    "Description": "Members of this group can administer the Windows Server Update Services role.",
+    "Scope": "DomainLocal"
+  },
+  {
+    "Path": "CN=Users,%DomainDN%",
+    "Name": "WSUS Reporters",
+    "Description": "Members of this group can generate reports but cannot approve updates or configure the Windows Server Update Services role.",
+    "Scope": "DomainLocal"
+  }
+]

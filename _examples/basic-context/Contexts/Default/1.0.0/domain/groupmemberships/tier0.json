@@ -1,0 +1,20 @@
+[
+    {
+        "Name": "Domain Admins",
+        "Domain": "%DomainSID%",
+        "ItemType": "Group",
+        "Group": "Tier 0 Admins"
+    },
+    {
+        "Name": "Tier 0 Admins",
+        "Domain": "%DomainSID%",
+        "ItemType": "Group",
+        "Group": "Tier 0 Users"
+    },
+    {
+        "Name": "Tier 0 Users",
+        "Domain": "%DomainSID%",
+        "ItemType": "Group",
+        "Group": "PSO-Policy-T0-Accounts"
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "Name": "Clients",
+        "Path": "%DomaiNDN%",
+        "Description": " "
+    },
+    {
+        "Name": "Company",
+        "Path": "%DomaiNDN%",
+        "Description": " "
+    },
+    {
+        "Name": "Microsoft Exchange Protected Groups",
+        "Path": "%DomaiNDN%",
+        "Description": " "
+    },
+    {
+        "Name": "Microsoft Exchange Security Groups",
+        "Path": "%DomaiNDN%",
+        "Description": " "
+    },
+    {
+        "Name": "Resources",
+        "Path": "%DomaiNDN%",
+        "Description": " "
+    }
+]
