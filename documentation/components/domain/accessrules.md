@@ -131,6 +131,8 @@ Convert-DMSchemaGuid -Name 00000000-0000-0000-0000-000000000000 -OutType Name -S
 
 As custom object class may not have the same GUID in separate forests, using names may be required.
 
+> When specifying the name of a property or object class, use the value in the `adminDisplayName` on the schema attribute/class.
+
 ### InheritedObjectType
 
 Optional: Yes | Default: `<All>`
@@ -139,6 +141,8 @@ A second object class or attribute reference required for this access rule.
 Depending on the `ActiveDirectoryRights` setting this property may represent different things (or not be used at all).
 
 Same rules as ObjectType, accepts a GUID or its name-equivalent.
+
+> When specifying the name of a property or object class, use the value in the `adminDisplayName` on the schema attribute/class.
 
 ### AccessControlType
 
