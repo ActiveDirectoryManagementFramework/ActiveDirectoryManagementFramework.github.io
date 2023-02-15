@@ -94,6 +94,12 @@ Domain the entity is from, that is being granted group membership.
 The type of object being granted membership.
 Corresponds to the ObjectClass attribute value of the AD object(user, group, computer, ...).
 
+### ObjectCategory
+
+Rather than specifying an explicit entity, assign all principals in a given Object Cagtegory as group member.
+
+> Note: In order to be applicable, each category member must be a security principal (that has the ObjectSID property).
+
 ### Group
 
 > This parameter uses [name resolution](../../advanced/name-mapping.html).
