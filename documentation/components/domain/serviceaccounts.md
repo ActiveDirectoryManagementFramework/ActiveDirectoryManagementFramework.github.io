@@ -164,6 +164,20 @@ A missing computer will be logged but not otherwise noted.
 
 > This parameter uses [name resolution](../../advanced/name-mapping.html).
 
+### GroupName
+
+Only thus designated principals are allowed to retrieve the password to the gMSA.
+Using this you can grant access to an explicit list of ActiveDirectory groups.
+
+> This parameter uses [name resolution](../../advanced/name-mapping.html).
+
+### KerberosEncryptionType
+
+The supported Kerberos encryption types.
+Can be any combination of 'AES128', 'AES256', 'DES', 'RC4'
+
+> Default: 'AES128','AES256'
+
 ### Enabled
 
 Whether the account should be enabled or disabled.
@@ -179,3 +193,8 @@ Set this to $false in order to explicitly delete an existing gMSA.
 
 Offer additional attributes to define.
 This can be either a hashtable or an object and can contain any writeable properties a gMSA can have in your organization.
+
+### OldNames
+
+A list of previous names the gMSA held.
+This causes the ADMF to trigger rename actions.
