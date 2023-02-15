@@ -5,8 +5,6 @@
 Object categories are a way to apply settings to a type of object based on a ruleset / filterset.
 For example, by registering an object category "Domain Controllers" (with appropriate filters / conditions), it becomes possible to define access rules that apply to all domain controllers, but not all computers.
 
-> Object Categories are currently only implemented by AccessRules.
-
 To define an Object Category in a [Context](../../basics/contexts.html), create `.psd1` (*NOT* `.json`) files in the `domain/objectcategories` folder.
 
 ## Example Configuration
