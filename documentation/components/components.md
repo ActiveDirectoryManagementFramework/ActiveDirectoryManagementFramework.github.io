@@ -44,6 +44,7 @@ Forest level settings are global settings found in the schema and configuration 
 These apply to _all_ domains in a given forest.
 
 + [Forest Level](forest/forestlevel.html)
++ [Certificates](forest/certificates.html)
 + [NTAuthStore](forest/ntauthstore.html)
 + [Schema (ldif)](forest/schema-ldif.html)
 + [Schema](forest/schema.html)

@@ -9,6 +9,10 @@
             "Link":  "forestlevel.html"
 		},
         {
+            "Label":  "Certificates",
+            "Link":  "certificates.html"
+        },
+        {
             "Label":  "NTAuthStore",
             "Link":  "ntauthstore.html"
         },

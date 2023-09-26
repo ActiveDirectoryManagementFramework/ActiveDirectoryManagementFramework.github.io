@@ -5,6 +5,8 @@
 The NTAuthStore [Component](../components.html) allows you to define certificates to apply to the central enterprise store of trusted certificates.
 Useful for rolling out trust to a central PKI in a dedicated forest.
 
+> While still functional, this [Component](../components.html) has been superseded by the more capable [Certificates](certificates.html) [Component](../components.html)
+
 ## Defining Configuration
 
 To define the certificates to register, simply drop the .cer files in the `forest/ntAuthStore` folder of a [Context](../../basics/contexts.html).
@@ -20,7 +22,7 @@ To define the authorative mode, create a json file (name not important) in the `
 
 ```json
 {
-	Authorative: true
+    "Authorative": true
 }
 ```
 
