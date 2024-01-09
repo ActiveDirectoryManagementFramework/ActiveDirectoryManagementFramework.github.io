@@ -5,7 +5,7 @@ Using freely combinable configuration sets, you can define your desired state in
 
 ## Looking to get started?
 
-+ Watch the [Introduction to the Active Directory Management Framework](https://www.youtube.com/watch?v=Q77TZ4JnCtc) video
++ Watch the [Introduction to the Active Directory Management Framework](https://www.youtube.com/watch?v=6NIuFOT3wKI) video
 + Check out the [Quick Start Guide](documentation/basics/getting-started.html) for a swift orientation.
 + In the [documentation section](documentation.html) you can find all the docs needed to use this.
 + The [Component Index](documentation/components/components.html) has more details for each type of object definable.
