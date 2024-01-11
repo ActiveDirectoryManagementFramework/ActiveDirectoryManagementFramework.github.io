@@ -74,3 +74,13 @@ Supported Values:
 |Subtree|All items under the searchbase. (default)|
 |OneLevel|All items directly under the searchbase.|
 |Base|Only the searchbase itself is inspected.|
+
+## Notes on Filters
+
+Object Categories are applied in two ways:
+
++ I already have an AD Object and want to know whether it is part of the Object Category (`TestScript`)
++ Active Directory, give me all objects of that category (`Filter` or `LDAPFilter`)
+
+Depending on how any other Component works, either a filter or the TestScript is used.
+Thus it is recommended, that both conditions evaluate the same way - Components will not use both ways to validate an object and results may be inconsistent if TestScript and Filter resolve to different results.
