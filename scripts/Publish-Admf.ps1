@@ -26,6 +26,9 @@
 	By default, this script will use "Find-Module" and "Publish-MModule"
 	Use this switch to instead use "Find-PSResource" and "Publish-PSResource"
 
+.PARAMETER Credential
+	Credentials use for repository access.
+
 .PARAMETER Modules
 	The modules to publish.
 	Must be provided in the correct order of dependency.
@@ -50,6 +53,9 @@ param (
 	[switch]
 	$UseGetV3,
 
+	[pscredential]
+	$Credential,
+
 	[string[]]
 	$Modules = @(
 		'string'
@@ -70,6 +76,13 @@ trap {
 	Remove-Item -Path $tempRoot -Force -Recurse -ErrorAction SilentlyContinue
 	Write-Warning "Script failed: $_"
 	throw $_
+}
+
+if ($Credential) {
+	$PSDefaultParameterValues['Find-Module:Credential'] = $Credential
+	$PSDefaultParameterValues['Find-PSResource:Credential'] = $Credential
+	$PSDefaultParameterValues['Publish-Module:Credential'] = $Credential
+	$PSDefaultParameterValues['Publish-PSResource:Credential'] = $Credential
 }
 
 #region Functions
@@ -118,7 +131,7 @@ function Build-Module {
 			else { Publish-Module -Path "$WorkingDirectory\$Name\$Name" -Repository $Repository }
 		}
 		default {
-			& "$WorkingDirectory\$Name\build\vsts-build.ps1" -Repository $Repository -ApiKey DevOps
+			. "$WorkingDirectory\$Name\build\vsts-build.ps1" -Repository $Repository -ApiKey DevOps -WorkingDirectory "$WorkingDirectory\$Name"
 		}
 	}
 }
@@ -212,10 +225,18 @@ function Test-ModuleUpdatePending {
 	)
 
 	# Would prefer to use "Import-PowerShellDataFile", but some manifests cannot be read that way
-	$localVersion = (Get-Content -Path "$Path\$Name\$Name\$Name.psd1" | Where-Object { $_ -match 'ModuleVersion' }) -replace "^.+?['`"]" -replace "['`"]+$" -as [version]
+	$localVersion = (Get-Content -Path "$Path\$Name\$Name\$Name.psd1" | Where-Object { $_ -match '^\s*ModuleVersion' }) -replace "^.+?['`"]" -replace "['`"]+$" -as [version]
 
-	if ($UseGetV3) { $remoteVersion = (Find-PSResource -Name $Name -Repository $Repository).Version -as [Version] }
-	else { $remoteVersion = (Find-Module -Name $Name -Repository $Repository).Version -as [Version] }
+	try {
+		if ($UseGetV3) { $remoteVersion = (Find-PSResource -Name $Name -Repository $Repository).Version -as [Version] }
+		else { $remoteVersion = (Find-Module -Name $Name -Repository $Repository).Version -as [Version] }
+	}
+	catch {
+		if ('ObjectNotFound','ResourceUnavailable','ParserError' -notcontains $_.CategoryInfo.Category) {
+			throw
+		}
+		$remoteVersion = '0.0.0' -as [Version]
+	}
 
 	if (-not $remoteVersion) { return $true }
 	if ($remoteVersion -lt $localVersion) { return $true }
@@ -224,7 +245,18 @@ function Test-ModuleUpdatePending {
 #endregion Functions
 
 if ($UseGetV3) { 
-	Set-Alias -Scope Global -Name Publish-Module -Value Publish-PSResource
+	function global:Publish-Module {
+		[CmdletBinding()]
+		param (
+			$Path,
+			$NuGetApiKey,
+			[switch]
+			$Force,
+			$Repository
+		)
+
+		Publish-PSResource -Path $Path -Repository $Repository -ApiKey $NuGetApiKey -SkipDependenciesCheck
+	}
 }
 $tempRoot = New-TempDirectory
 

@@ -109,6 +109,10 @@ function ConvertTo-AccessRuleConfiguration {
 
     .PARAMETER Clip
         Converts results to json and pastes them to clipboard.
+
+	.PARAMETER NoResolve
+		Do not resolve GUIDs
+		GUIDs will be resovled using the last server used in DomainManagement, which may fail if credentials are needed.
     
     .EXAMPLE
         PS C:\> $res | ConvertTo-AccessRuleConfiguration
@@ -134,7 +138,10 @@ function ConvertTo-AccessRuleConfiguration {
         $InputObject,
 
         [switch]
-        $Clip
+        $Clip,
+
+		[switch]
+		$NoResolve
     )
 
     begin {
@@ -177,6 +184,10 @@ function ConvertTo-AccessRuleConfiguration {
                     'BUILTIN\Remote Management Users'             = 'S-1-5-32-580'
                     'BUILTIN\Storage Replica Administrators'      = 'S-1-5-32-582'
                 }
+
+				# Figure out last server used from the DC resolution message
+				$server = @((Get-PSFMessage | Where-Object String -eq 'Resolve-DomainController.Resolved').StringValue)[0]
+				if (-not $server) { $server = $env:USERDNSDOMAIN }
             }
 
             process {
@@ -215,14 +226,19 @@ function ConvertTo-AccessRuleConfiguration {
                 ObjectType            = $source.ObjectType -as [string]
                 InheritedObjectType   = $source.InheritedObjectType -as [string]
             }
+			if (-not $NoResolve) {
+				$hash.ObjectType = Convert-DMSchemaGuid -Server $server -Name $hash.ObjectType -OutType Name
+				$hash.InheritedObjectType = Convert-DMSchemaGuid -Server $server -Name $hash.InheritedObjectType -OutType Name
+			}
+
             if ($Path) { $hash.Path = $Path }
             elseif ($ObjectCategory) { $hash.ObjectCategory = $ObjectCategory }
             else {
-                if ($InputObject.Identity) {
+				if ($datum.DistinguishedName) {
+					$hash.Path = $datum.DistinguishedName | Set-String -OldValue 'DC=.+' -NewValue '%DomainDN%'
+				}
+                elseif ($InputObject.Identity) {
                     $hash.Path = $InputObject.Identity | Set-String -OldValue 'DC=.+' -NewValue '%DomainDN%'
-                }
-                elseif ($datum.DistinguishedName) {
-                    $hash.Path = $datum.DistinguishedName | Set-String -OldValue 'DC=.+' -NewValue '%DomainDN%'
                 }
                 else {
                     $hash.Path = "INSERT_HERE"
