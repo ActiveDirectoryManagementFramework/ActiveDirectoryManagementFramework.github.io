@@ -94,10 +94,6 @@
                     'BUILTIN\Remote Management Users'             = 'S-1-5-32-580'
                     'BUILTIN\Storage Replica Administrators'      = 'S-1-5-32-582'
                 }
-
-				# Figure out last server used from the DC resolution message
-				$server = @((Get-PSFMessage | Where-Object String -eq 'Resolve-DomainController.Resolved').StringValue)[0]
-				if (-not $server) { $server = $env:USERDNSDOMAIN }
             }
 
             process {
@@ -121,6 +117,10 @@
         }
 
         $list = [System.Collections.ArrayList]@()
+
+		# Figure out last server used from the DC resolution message
+		$server = @((Get-PSFMessage | Where-Object String -eq 'Resolve-DomainController.Resolved' | Select-Object -Last 1).StringValue)[0]
+		if (-not $server) { $server = $env:USERDNSDOMAIN }
     }
     process {
         $data = $InputObject
@@ -129,7 +129,7 @@
             $source = $datum.ADObject
             if ($datum.Configuration) { $source = $datum.Configuration }
             $hash = @{
-                Identity              = $source.IdentityReference | Convert-Identity
+                Identity              = $source.IdentityReference | Convert-Identity | Set-String -OldValue '^.+\\' -NewValue '%DomainNetBIOSName%\'
                 ActiveDirectoryRights = $source.ActiveDirectoryRights -as [string]
                 InheritanceType       = $source.InheritanceType -as [string]
                 AccessControlType     = $source.AccessControlType -as [string]
