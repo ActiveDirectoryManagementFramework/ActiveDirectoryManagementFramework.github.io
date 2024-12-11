@@ -19,8 +19,9 @@ The content mode is defined by the following properties:
 + Include
 + Exclude
 + UserExcludePattern
++ RemoveUnknownWmiFilter
 
-### Mode
+### Mode (string: Additive|Constrained)
 
 The mode defines, whether we consider anything at all beyond what we define:
 
@@ -31,7 +32,7 @@ If multiple [Contexts](contexts.html) define this property, the last one wins.
 
 > Default mode if no [Context](contexts.html) defines it: Additive
 
-### Include/Exclude
+### Include/Exclude (string[])
 
 Using the Include & Exclude string arrays, we can then define a list of OUs to "take under management" or "exclude from management".
 That is, define OU structures, which are subject to having undefined objects deleted from, or OUs which are exempt from that.
@@ -43,11 +44,19 @@ If only Exclude rules are defined, the system implicitly creates an Include rule
 If a later context then adds an Include rule, this no longer happens, possibly failing to apply your intent.
 If you wish to mix both - or know there is a risk of it happening - and still want everything to be under management by default, manually define "%DomainDN%" as include rule.
 
-### UserExcludePattern
+### UserExcludePattern (string[])
 
 Some users are hard to pre-define, and thus need to be excluded from prevention without being able to pre-determine their names explicitly.
 Very common case: Exchange System Mailbox users.
 For those you can define name patterns (using regex) to spare them from deletion.
+
+### RemoveUnknownWmiFilter (bool)
+
+WMI Filters are used to help target Group Policy objects.
+However, the filters themselves live outside of the OU structure and thus are hard to target based on Include/Exclude.
+By default, ADMF will _only_ target WMI Filters defined in configuration and ignore all others.
+
+This Content Mode setting changes that behavior and setting it to "true" will have ADMF delete all undefined WMI filters.
 
 ## Defining Content Mode
 
@@ -92,6 +101,21 @@ Equally legal and has the same effect:
     ],
     "Exclude":  [],
     "UserExcludePattern":  []
+}
+```
+
+> Content Mode & psd1
+
+Instead of creating it as a json file (`content_mode.json`) it is also possible to use the psd1 format instead (`content_mode.psd1`):
+
+```powershell
+@{
+    Mode = 'Constrained'
+    Exclude = @(
+        "OU=Resources,%DomainDN%"
+        "OU=Clients,%DomainDN%"
+        "OU=Company,%DomainDN%"
+    )
 }
 ```
 

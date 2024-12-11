@@ -37,6 +37,7 @@ A few object types can be used for both however (Access Rules, Custom AD Objects
 + [Finegrained Password Policies](domain/password-policies.html)
 + [Service Accounts](domain/serviceaccounts.html)
 + [Users](domain/users.html)
++ [WMI Filters](domain/wmifilter.html)
 
 ## Forest
 

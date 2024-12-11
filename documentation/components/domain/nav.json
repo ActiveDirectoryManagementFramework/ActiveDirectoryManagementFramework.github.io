@@ -75,6 +75,10 @@
         {
             "Label":  "Service Accounts",
             "Link":  "serviceaccounts.html"
+        },
+        {
+            "Label":  "WMI Filter",
+            "Link":  "wmifilter.html"
         }
     ]
 }
